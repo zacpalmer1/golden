@@ -17,9 +17,9 @@ struct ContentView: View {
         
         .toolbar{
             ToolbarItem(placement: .principal) {
-                //Image("goldenlogo")
-                   // .resizable()
-                   // .frame(width:140, height:45)
+                Image("goldenlogo")
+                     .resizable()
+                     .frame(width:140, height:45)
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button{
