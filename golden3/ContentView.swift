@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// this is a test
 struct ContentView: View {
     var body: some View {
         NavigationView{
@@ -19,7 +20,7 @@ struct ContentView: View {
             ToolbarItem(placement: .principal) {
                 Image("goldenlogo")
                      .resizable()
-                     .frame(width:140, height:45)
+                     .frame(width:130, height:45)
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button{
