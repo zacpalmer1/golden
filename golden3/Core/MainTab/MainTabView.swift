@@ -21,7 +21,7 @@ struct MainTabView: View {
                         }
                         .tabItem{
                        // Image("homelogo")
-                         //   .resizable()
+                         //  .resizable()
                          //   .ignoresSafeArea()
                           //  .frame(width: 50, height: 50)
                                 
