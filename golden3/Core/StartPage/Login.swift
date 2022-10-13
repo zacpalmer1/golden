@@ -18,12 +18,25 @@ struct Login: View {
     var body: some View {
         VStack {
                 TextField("First Name", text: $firstname).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 35)
+                .padding(.vertical, 5)
                 TextField("Last Name", text: $lastname).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 35)
+                .padding(.vertical, 5)
                 TextField("Username", text: $username).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 35)
+                .padding(.vertical, 5)
                 TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 35)
+                .padding(.vertical, 5)
                 TextField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 35)
+                .padding(.vertical, 5)
                 TextField("Confirm Password", text: $confirmpassword).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 35)
+                .padding(.vertical, 5)
                 }
+        
         
     }
 }

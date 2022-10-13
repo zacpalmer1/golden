@@ -20,6 +20,8 @@
 		B2C4E8682858199B00731F12 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E8672858199B00731F12 /* ProfileView.swift */; };
 		B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E86A28581A5100731F12 /* ClockView.swift */; };
 		B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E86C28581B4600731F12 /* ActualFeed.swift */; };
+		D102E7CF28F7A74B0051EB1F /* please.riv in Resources */ = {isa = PBXBuildFile; fileRef = D102E7CE28F7A74B0051EB1F /* please.riv */; };
+		D125E2B128F7B52C00CDAABC /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D125E2B028F7B52C00CDAABC /* RiveRuntime */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		B2C4E8672858199B00731F12 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B2C4E86A28581A5100731F12 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		B2C4E86C28581B4600731F12 /* ActualFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFeed.swift; sourceTree = "<group>"; };
+		D102E7CE28F7A74B0051EB1F /* please.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = please.riv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D125E2B128F7B52C00CDAABC /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,14 @@
 				B20D939B28C68C20009D7DE6 /* Login.swift */,
 			);
 			path = StartPage;
+			sourceTree = "<group>";
+		};
+		B247FE9328F71F0A002EFFA3 /* Rive */ = {
+			isa = PBXGroup;
+			children = (
+				D102E7CE28F7A74B0051EB1F /* please.riv */,
+			);
+			path = Rive;
 			sourceTree = "<group>";
 		};
 		B2C4E83A2858107F00731F12 = {
@@ -81,6 +93,7 @@
 				B2C4E856285810F200731F12 /* Model */,
 				B2C4E855285810F100731F12 /* Service */,
 				B2C4E854285810EF00731F12 /* Core */,
+				B247FE9328F71F0A002EFFA3 /* Rive */,
 				B2C4E8462858107F00731F12 /* golden3App.swift */,
 				B2C4E8482858107F00731F12 /* ContentView.swift */,
 				B2C4E84A2858108000731F12 /* Assets.xcassets */,
@@ -230,6 +243,9 @@
 			dependencies = (
 			);
 			name = golden3;
+			packageProductDependencies = (
+				D125E2B028F7B52C00CDAABC /* RiveRuntime */,
+			);
 			productName = golden3;
 			productReference = B2C4E8432858107F00731F12 /* golden3.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +274,9 @@
 				Base,
 			);
 			mainGroup = B2C4E83A2858107F00731F12;
+			packageReferences = (
+				D125E2AF28F7B52C00CDAABC /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			productRefGroup = B2C4E8442858107F00731F12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C4E84E2858108000731F12 /* Preview Assets.xcassets in Resources */,
+				D102E7CF28F7A74B0051EB1F /* please.riv in Resources */,
 				B2C4E84B2858108000731F12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -423,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"golden3/Preview Content\"";
+				DEVELOPMENT_TEAM = PMGUKN8NLP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -430,6 +451,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"golden3/Preview Content\"";
+				DEVELOPMENT_TEAM = PMGUKN8NLP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -458,6 +481,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +517,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D125E2AF28F7B52C00CDAABC /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D125E2B028F7B52C00CDAABC /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D125E2AF28F7B52C00CDAABC /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2C4E83B2858107F00731F12 /* Project object */;
 }

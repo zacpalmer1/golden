@@ -34,8 +34,8 @@ struct MainTabView: View {
                             self.selectIndex = 1
                         }
                         .tabItem{
-                       // Image("time")
-                          //  .resizable()
+                        //Image("time")
+                           // .resizable()
                            // .frame(width:50, height: 50)
                             
                                 
@@ -47,9 +47,9 @@ struct MainTabView: View {
                             self.selectIndex = 2
                         }
                         .tabItem{
-                        Image("profilelogo")
+                        Image("searchlogo")
                                 .resizable()
-                                .frame(width: 50, height: 100)
+                                .frame(width: 100, height: 100)
                                 
                     }
                         .tag(2)

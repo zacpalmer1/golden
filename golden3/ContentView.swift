@@ -28,16 +28,18 @@ struct ContentView: View {
                 Button{
                     
                 } label: {
-                    Image("searchlogo")
+                    Image("more")
+                        .resizable()
+                        .frame(width:20, height:20)
                 }
             }
             ToolbarItem(placement: .navigationBarLeading) {
                 Button{
                     
                 } label: {
-                    Image("more")
+                    Image("profilelogo")
                         .resizable()
-                        .frame(width:20, height:20)
+                        .frame(width:50, height:50)
                 }
             
             }
@@ -51,9 +53,15 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-       
+        ZStack{
             ContentView()
-         
+        }
         
+    }
+}
+
+struct Previews_ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
