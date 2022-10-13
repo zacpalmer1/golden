@@ -21,7 +21,6 @@
 		B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E86A28581A5100731F12 /* ClockView.swift */; };
 		B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E86C28581B4600731F12 /* ActualFeed.swift */; };
 		D102E7CF28F7A74B0051EB1F /* please.riv in Resources */ = {isa = PBXBuildFile; fileRef = D102E7CE28F7A74B0051EB1F /* please.riv */; };
-		D125E2B128F7B52C00CDAABC /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D125E2B028F7B52C00CDAABC /* RiveRuntime */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D125E2B128F7B52C00CDAABC /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +242,6 @@
 			);
 			name = golden3;
 			packageProductDependencies = (
-				D125E2B028F7B52C00CDAABC /* RiveRuntime */,
 			);
 			productName = golden3;
 			productReference = B2C4E8432858107F00731F12 /* golden3.app */;
@@ -275,7 +272,6 @@
 			);
 			mainGroup = B2C4E83A2858107F00731F12;
 			packageReferences = (
-				D125E2AF28F7B52C00CDAABC /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = B2C4E8442858107F00731F12 /* Products */;
 			projectDirPath = "";
@@ -517,25 +513,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D125E2AF28F7B52C00CDAABC /* XCRemoteSwiftPackageReference "rive-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rive-app/rive-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D125E2B028F7B52C00CDAABC /* RiveRuntime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D125E2AF28F7B52C00CDAABC /* XCRemoteSwiftPackageReference "rive-ios" */;
-			productName = RiveRuntime;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2C4E83B2858107F00731F12 /* Project object */;
 }

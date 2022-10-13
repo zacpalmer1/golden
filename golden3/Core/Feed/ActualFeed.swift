@@ -6,22 +6,22 @@
 //
 
 import SwiftUI
-import RiveRuntime
+//import RiveRuntime
 
 
 struct ActualFeed: View {
     var body: some View {
         // Animated Background
-        ZStack{
-            RiveViewModel(fileName: "please").view()
-                .ignoresSafeArea(.all)
-                .blur(radius: 40)
+    //    ZStack{
+        //        RiveViewModel(fileName: "please").view()
+    //            .ignoresSafeArea(.all)
+     //           .blur(radius: 40)
             VStack{
                 FeedView()
                 
             }
             
-        }
+      //  }
         
     }
 }
