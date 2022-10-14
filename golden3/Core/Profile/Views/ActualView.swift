@@ -10,9 +10,7 @@ import SwiftUI
 struct ActualView: View {
     var body: some View {
         ZStack{
-            Image("dark")
-                .resizable()
-                .ignoresSafeArea()
+            BackgroundAnimated()
             VStack{
                 ProfileView()
                 

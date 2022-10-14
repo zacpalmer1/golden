@@ -15,7 +15,7 @@ struct SignupInput: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .frame(width: 340, height: 160)
+                .frame(width: 380, height: 160)
                 .cornerRadius(25)
                 .foregroundColor(.white)
                 .opacity(0.4)

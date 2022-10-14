@@ -11,7 +11,9 @@ import SwiftUI
 struct golden3App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            GreetingView()
+            
         }
     }
 }
