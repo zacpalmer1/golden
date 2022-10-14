@@ -121,12 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				D162182828F8C0C200EAED92 /* ProjectFonts */,
-				B2C4E86928581A4000731F12 /* Clock */,
-				B2C4E85B2858115000731F12 /* Feed */,
-				B2C4E85A2858114B00731F12 /* Components */,
 				B20D939A28C68BEC009D7DE6 /* StartPage */,
-				B2C4E8592858113000731F12 /* MainTab */,
+				B2C4E85B2858115000731F12 /* Feed */,
 				B2C4E8582858112200731F12 /* Profile */,
+				B2C4E85A2858114B00731F12 /* Components */,
+				B2C4E8592858113000731F12 /* MainTab */,
+				B2C4E86928581A4000731F12 /* Clock */,
 			);
 			path = Core;
 			sourceTree = "<group>";

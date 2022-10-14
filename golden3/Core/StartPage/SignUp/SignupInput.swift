@@ -30,12 +30,15 @@ struct SignupInput: View {
                     .padding(.horizontal, 45)
                     .padding(.vertical, 5)
                     .font(Font.custom("FredokaOne-Regular", size: 16))
-                
-                Text("Forgot Password?")
-                    .font(Font.custom("FredokaOne-Regular", size: 10))
-                    .padding(.leading, 200)
-
-                
+                Button{
+                    
+                } label: {
+                    Text("Forgot Password?")
+                        .font(Font.custom("FredokaOne-Regular", size: 10))
+                        .padding(.leading, 200)
+                        .foregroundColor(.white)
+                    
+                }
             }
         }
         
