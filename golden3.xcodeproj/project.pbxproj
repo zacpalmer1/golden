@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B20D939C28C68C20009D7DE6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D939B28C68C20009D7DE6 /* Login.swift */; };
+		B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D939B28C68C20009D7DE6 /* LoginInput.swift */; };
 		B214FB8128BFFE470049FCFC /* animatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214FB8028BFFE470049FCFC /* animatedBackground.swift */; };
 		B23F511228590E360080FE33 /* ActualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F511128590E360080FE33 /* ActualView.swift */; };
 		B2C4E8472858107F00731F12 /* golden3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E8462858107F00731F12 /* golden3App.swift */; };
@@ -21,10 +21,12 @@
 		B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E86A28581A5100731F12 /* ClockView.swift */; };
 		B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E86C28581B4600731F12 /* ActualFeed.swift */; };
 		D102E7CF28F7A74B0051EB1F /* please.riv in Resources */ = {isa = PBXBuildFile; fileRef = D102E7CE28F7A74B0051EB1F /* please.riv */; };
+		D162182E28F8D0F000EAED92 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D162182D28F8D0F000EAED92 /* FredokaOne-Regular.ttf */; };
+		D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3688F28F8DFA900BF016F /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B20D939B28C68C20009D7DE6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B20D939B28C68C20009D7DE6 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		B214FB8028BFFE470049FCFC /* animatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedBackground.swift; sourceTree = "<group>"; };
 		B23F511128590E360080FE33 /* ActualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualView.swift; sourceTree = "<group>"; };
 		B2C4E8432858107F00731F12 /* golden3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golden3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +41,9 @@
 		B2C4E86A28581A5100731F12 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		B2C4E86C28581B4600731F12 /* ActualFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFeed.swift; sourceTree = "<group>"; };
 		D102E7CE28F7A74B0051EB1F /* please.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = please.riv; sourceTree = "<group>"; };
+		D162182D28F8D0F000EAED92 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
+		D1D3688A28F8D2F600BF016F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D1D3688F28F8DFA900BF016F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +60,8 @@
 		B20D939A28C68BEC009D7DE6 /* StartPage */ = {
 			isa = PBXGroup;
 			children = (
-				B20D939B28C68C20009D7DE6 /* Login.swift */,
+				D1D3689228F8DFC600BF016F /* SignUp */,
+				D1D3689128F8DFB700BF016F /* Login */,
 			);
 			path = StartPage;
 			sourceTree = "<group>";
@@ -87,6 +93,7 @@
 		B2C4E8452858107F00731F12 /* golden3 */ = {
 			isa = PBXGroup;
 			children = (
+				D1D3688A28F8D2F600BF016F /* Info.plist */,
 				B2C4E857285810F400731F12 /* Extensions */,
 				B2C4E856285810F200731F12 /* Model */,
 				B2C4E855285810F100731F12 /* Service */,
@@ -111,6 +118,7 @@
 		B2C4E854285810EF00731F12 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D162182828F8C0C200EAED92 /* ProjectFonts */,
 				B2C4E86928581A4000731F12 /* Clock */,
 				B2C4E85B2858115000731F12 /* Feed */,
 				B2C4E85A2858114B00731F12 /* Components */,
@@ -225,6 +233,30 @@
 			path = Clock;
 			sourceTree = "<group>";
 		};
+		D162182828F8C0C200EAED92 /* ProjectFonts */ = {
+			isa = PBXGroup;
+			children = (
+				D162182D28F8D0F000EAED92 /* FredokaOne-Regular.ttf */,
+			);
+			path = ProjectFonts;
+			sourceTree = "<group>";
+		};
+		D1D3689128F8DFB700BF016F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B20D939B28C68C20009D7DE6 /* LoginInput.swift */,
+				D1D3688F28F8DFA900BF016F /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D1D3689228F8DFC600BF016F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +322,7 @@
 				B2C4E84E2858108000731F12 /* Preview Assets.xcassets in Resources */,
 				D102E7CF28F7A74B0051EB1F /* please.riv in Resources */,
 				B2C4E84B2858108000731F12 /* Assets.xcassets in Resources */,
+				D162182E28F8D0F000EAED92 /* FredokaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,10 +339,11 @@
 				B2C4E8492858107F00731F12 /* ContentView.swift in Sources */,
 				B2C4E85F2858119A00731F12 /* FeedView.swift in Sources */,
 				B23F511228590E360080FE33 /* ActualView.swift in Sources */,
+				D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */,
 				B2C4E8472858107F00731F12 /* golden3App.swift in Sources */,
 				B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */,
 				B2C4E8682858199B00731F12 /* ProfileView.swift in Sources */,
-				B20D939C28C68C20009D7DE6 /* Login.swift in Sources */,
+				B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */,
 				B2C4E861285811CB00731F12 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +476,7 @@
 				DEVELOPMENT_TEAM = PMGUKN8NLP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = golden3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -472,6 +507,7 @@
 				DEVELOPMENT_TEAM = PMGUKN8NLP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = golden3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

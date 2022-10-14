@@ -47,18 +47,18 @@ struct MainTabView: View {
                             self.selectIndex = 2
                         }
                         .tabItem{
-                        Image("searchlogo")
-                                .resizable()
-                                .frame(width: 100, height: 100)
+                       // Image("searchlogo")
+                               // .resizable()
+                               // .frame(width: 100, height: 100)
                                 
                     }
                         .tag(2)
-                        
+                        .background(Color.gray)
                 }
                 .onAppear(){
                     UITabBar.appearance().barTintColor = .white
                 }
-                
+                .background(Color.gray)
                     
             }
             

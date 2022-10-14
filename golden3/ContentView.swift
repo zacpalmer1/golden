@@ -23,6 +23,7 @@ struct ContentView: View {
                 Image("goldenlogo")
                      .resizable()
                      .frame(width:130, height:45)
+                     .padding(.trailing, 125)
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button{
@@ -37,10 +38,19 @@ struct ContentView: View {
                 Button{
                     
                 } label: {
-                    Image("profilelogo")
-                        .resizable()
+                    // Profile image will take the place of Circle
+                    // This will display the users profile image
+                    Circle()
+                        .fill(.gray)
                         .frame(width:50, height:50)
+                        .padding(.top, 55)
+                    // username will be the users unique username
+                    Text("username")
+                        .font(Font.custom("FredokaOne-Regular", size: 18))
+                        .foregroundColor(.white)
+                        .padding(.top, 85)
                 }
+            
             
             }
             

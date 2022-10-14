@@ -16,6 +16,7 @@ struct ActualFeed: View {
         //        RiveViewModel(fileName: "please").view()
     //            .ignoresSafeArea(.all)
      //           .blur(radius: 40)
+        
             VStack{
                 FeedView()
                 

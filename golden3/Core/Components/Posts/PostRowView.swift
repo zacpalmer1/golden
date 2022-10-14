@@ -17,33 +17,41 @@ struct PostRowView: View {
                 .overlay(
                 
                     VStack(alignment: .center, spacing: -9) {
-                        Image("street")
-                            .resizable()
-                            .ignoresSafeArea()
-                            .frame(width: 334, height:320)
-                            .cornerRadius(25, corners: [.topLeft, .topRight])
+                       // Image("street")
+                           // .resizable()
+                           // .ignoresSafeArea()
+                           // .frame(width: 334, height:320)
+                           // .cornerRadius(25, corners: [.topLeft, .topRight])
                         HStack(spacing: 20){
                             Button{
                                 
                             } label: {
-                                Image("more")
-                                    .resizable()
-                                    .frame(width: 15, height: 15)
+                                Text("...")
+                                    .font(Font.custom("FredokaOne-Regular", size: 20))
+                                    .foregroundColor(.white)
+                                    .padding(.bottom, 7)
                             }
                             Button{
                                 
                             } label: {
-                                Image("comment")
-                                    .resizable()
-                                    .frame(width:80, height: 50)
+                                Text("comment")
+                                    .font(Font.custom("FredokaOne-Regular", size: 15))
+                                    .foregroundColor(.white)
                             }
                             
                             Button{
                                 
                             } label: {
-                                Image("userProfileImage")
-                                    .resizable()
-                                    .frame(width:120, height:33)
+                                Circle()
+                                    .foregroundColor(.gray)
+                                    .frame(width:50, height:33)
+                                    
+                                Text("username")
+                                    .font(Font.custom("FredokaOne-Regular", size: 15))
+                                    .foregroundColor(.white)
+                                
+                                    
+                                
                             }
                               .padding()
                             
