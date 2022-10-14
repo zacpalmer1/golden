@@ -21,10 +21,11 @@ struct LoginView: View {
                     .padding(.bottom, 0)
                     .opacity(0.7)
                 Text("+")
+                    .foregroundColor(.white)
                     .font(Font.custom("FredokaOne-Regular", size: 60))
                     .padding(.trailing, 270)
                     .padding(.bottom, 11)
-                    .opacity(0.7)
+                    
                 
                 Text("Profile Picture")
                     .font(Font.custom("FredokaOne-Regular", size: 20))
@@ -44,6 +45,10 @@ struct LoginView: View {
                     .font(Font.custom("FredokaOne-Regular", size: 20))
 
             }
+            Text("Already have an account? Sign in")
+                .font(Font.custom("FredokaOne-Regular", size: 13))
+                .padding(.top)
+
         }
     }
 }

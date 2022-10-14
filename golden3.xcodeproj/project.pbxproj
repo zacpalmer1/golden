@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D939B28C68C20009D7DE6 /* LoginInput.swift */; };
-		B214FB8128BFFE470049FCFC /* animatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214FB8028BFFE470049FCFC /* animatedBackground.swift */; };
 		B23F511228590E360080FE33 /* ActualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F511128590E360080FE33 /* ActualView.swift */; };
 		B2C4E8472858107F00731F12 /* golden3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E8462858107F00731F12 /* golden3App.swift */; };
 		B2C4E8492858107F00731F12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E8482858107F00731F12 /* ContentView.swift */; };
@@ -23,11 +22,12 @@
 		D102E7CF28F7A74B0051EB1F /* please.riv in Resources */ = {isa = PBXBuildFile; fileRef = D102E7CE28F7A74B0051EB1F /* please.riv */; };
 		D162182E28F8D0F000EAED92 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D162182D28F8D0F000EAED92 /* FredokaOne-Regular.ttf */; };
 		D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3688F28F8DFA900BF016F /* LoginView.swift */; };
+		D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689528F8E5A900BF016F /* SignupInput.swift */; };
+		D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689728F8E6AC00BF016F /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B20D939B28C68C20009D7DE6 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
-		B214FB8028BFFE470049FCFC /* animatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animatedBackground.swift; sourceTree = "<group>"; };
 		B23F511128590E360080FE33 /* ActualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualView.swift; sourceTree = "<group>"; };
 		B2C4E8432858107F00731F12 /* golden3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golden3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4E8462858107F00731F12 /* golden3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golden3App.swift; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		D162182D28F8D0F000EAED92 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		D1D3688A28F8D2F600BF016F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D1D3688F28F8DFA900BF016F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D1D3689528F8E5A900BF016F /* SignupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInput.swift; sourceTree = "<group>"; };
+		D1D3689728F8E6AC00BF016F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +184,6 @@
 				B2C4E85C2858117900731F12 /* ViewModels */,
 				B2C4E85E2858119A00731F12 /* FeedView.swift */,
 				B2C4E86C28581B4600731F12 /* ActualFeed.swift */,
-				B214FB8028BFFE470049FCFC /* animatedBackground.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -253,6 +254,8 @@
 		D1D3689228F8DFC600BF016F /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				D1D3689528F8E5A900BF016F /* SignupInput.swift */,
+				D1D3689728F8E6AC00BF016F /* SignupView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -333,7 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B214FB8128BFFE470049FCFC /* animatedBackground.swift in Sources */,
+				D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */,
 				B2C4E8642858131900731F12 /* PostRowView.swift in Sources */,
 				B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */,
 				B2C4E8492858107F00731F12 /* ContentView.swift in Sources */,
@@ -342,6 +345,7 @@
 				D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */,
 				B2C4E8472858107F00731F12 /* golden3App.swift in Sources */,
 				B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */,
+				D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */,
 				B2C4E8682858199B00731F12 /* ProfileView.swift in Sources */,
 				B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */,
 				B2C4E861285811CB00731F12 /* MainTabView.swift in Sources */,
