@@ -6,8 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignupView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    @State var email = ""
+    @State var password = ""
+    
+    @State var authProcessing = false
+    @State var authProcessingErrorMsg = ""
     var body: some View {
         ZStack{
             BackgroundAnimated()
@@ -66,13 +75,13 @@ struct SignupView: View {
                             .padding(.leading, 15)
                     }
                 }
-                SignupInput()
-                    .padding(.top)
-                //Login button linked to Login Page
-                NavigationLink{
-                    ContentView()
-                        .navigationBarHidden(true)
-                } label: {
+                
+                SignInCredentialFields(email: $email, password: $password)
+                
+                // Sign in button
+                Button(action: {
+                    signInUser(userEmail: email, userPassword: password)
+                }) {
                     ZStack{
                         Rectangle()
                             .frame(width: 280, height: 60)
@@ -85,17 +94,15 @@ struct SignupView: View {
                             .foregroundColor(.white)
                     }
                 }
-                
                 HStack{
                     Text("Dont have an account?")
                         .font(Font.custom("FredokaOne-Regular", size: 13))
                         .padding(.top, 1)
                         .foregroundColor(.white)
                     //Login button linked to Login Page
-                    NavigationLink{
-                        LoginView()
-                            .navigationBarHidden(true)
-                    } label: {
+                    Button(action: {
+                        viewRouter.currentPage = .loginPage
+                    }){
                         ZStack{
                             Text("Sign Up")
                                 .font(Font.custom("FredokaOne-Regular", size: 13))
@@ -103,11 +110,64 @@ struct SignupView: View {
                                 .foregroundColor(.purple)
                         }
                     }
+   
                 }
             }
 
         }
     }
+    
+    // signs user in w/ firebase
+    
+    func signInUser(userEmail: String, userPassword: String){
+        authProcessing = true
+        
+        Auth.auth().signIn(withEmail: email, password: password){
+            authResult, error in guard error == nil else{
+                authProcessing = false
+                authProcessingErrorMsg = error!.localizedDescription
+                return
+            }
+            switch authResult {
+            case .none:
+                print("Could not sign into account")
+                authProcessing = false
+            case .some(_):
+                print("Signed in as: \(email)")
+                authProcessing = false
+                withAnimation {
+                    viewRouter.currentPage = .contentPage
+                }
+            }
+        }
+    }
+}
+
+
+struct SignInCredentialFields: View{
+    
+    @Binding var email: String
+    @Binding var password: String
+    
+    var body: some View{
+        Group {
+            // Fields for sign up, can add more (username, name, etc) moving forward but this is the
+            // base line->email,pass,passConfirm
+            
+            // Email -> can be changed to username in the future
+            TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 65)
+                .padding(.vertical, 3)
+                .font(Font.custom("FredokaOne-Regular", size: 16))
+            // Password
+            SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 65)
+                .padding(.vertical, 3)
+                .font(Font.custom("FredokaOne-Regular", size: 16))
+    
+        }
+    }
+
 }
 
 struct SignupView_Previews: PreviewProvider {

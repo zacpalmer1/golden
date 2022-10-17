@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HowItWorksView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+
     var body: some View {
         ZStack{
             BackgroundAnimated()
@@ -45,11 +48,9 @@ struct HowItWorksView: View {
 
                     
                 }
-                //Login button linked to Login Page
-                NavigationLink{
-                    ContentView()
-                        .navigationBarHidden(true)
-                } label: {
+                Button(action: {
+                    viewRouter.currentPage = .contentPage
+                }){
                     ZStack{
                         Rectangle()
                             .frame(width: 280, height: 60)
@@ -62,7 +63,6 @@ struct HowItWorksView: View {
                             .foregroundColor(.white)
                     }
                 }
-                
             }
         }
     }

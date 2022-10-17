@@ -30,6 +30,9 @@
 		D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3688F28F8DFA900BF016F /* LoginView.swift */; };
 		D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689528F8E5A900BF016F /* SignupInput.swift */; };
 		D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689728F8E6AC00BF016F /* SignupView.swift */; };
+		F315674F28FDEC9E005AF020 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F315674E28FDEC9E005AF020 /* GoogleService-Info.plist */; };
+		F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675028FDF82E005AF020 /* ViewRouter.swift */; };
+		F315675328FDF875005AF020 /* ViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675228FDF875005AF020 /* ViewControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		D1D3688F28F8DFA900BF016F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D1D3689528F8E5A900BF016F /* SignupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInput.swift; sourceTree = "<group>"; };
 		D1D3689728F8E6AC00BF016F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		F315674E28FDEC9E005AF020 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F315675028FDF82E005AF020 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		F315675228FDF875005AF020 /* ViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +118,15 @@
 		B2C4E8452858107F00731F12 /* golden3 */ = {
 			isa = PBXGroup;
 			children = (
+				B2C4E8462858107F00731F12 /* golden3App.swift */,
+				F315675028FDF82E005AF020 /* ViewRouter.swift */,
+				F315674E28FDEC9E005AF020 /* GoogleService-Info.plist */,
 				D1D3688A28F8D2F600BF016F /* Info.plist */,
 				B2C4E857285810F400731F12 /* Extensions */,
 				B2C4E856285810F200731F12 /* Model */,
 				B2C4E855285810F100731F12 /* Service */,
 				B2C4E854285810EF00731F12 /* Core */,
 				B247FE9328F71F0A002EFFA3 /* Rive */,
-				B2C4E8462858107F00731F12 /* golden3App.swift */,
 				B2C4E8482858107F00731F12 /* ContentView.swift */,
 				B2C4E84A2858108000731F12 /* Assets.xcassets */,
 				B2C4E84C2858108000731F12 /* Preview Content */,
@@ -137,6 +145,7 @@
 		B2C4E854285810EF00731F12 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F315675228FDF875005AF020 /* ViewControl.swift */,
 				D18FE65C28F9EFBC00C5A572 /* Background */,
 				D162182828F8C0C200EAED92 /* ProjectFonts */,
 				B20D939A28C68BEC009D7DE6 /* StartPage */,
@@ -319,7 +328,6 @@
 				BF789F482DD5FC528BF97B8A /* Pods-golden3.debug.xcconfig */,
 				BDD5F99B6851BE4CDBF84543 /* Pods-golden3.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -381,7 +389,7 @@
 			);
 			mainGroup = B2C4E83A2858107F00731F12;
 			packageReferences = (
-				D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */,
+				D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = B2C4E8442858107F00731F12 /* Products */;
 			projectDirPath = "";
@@ -402,6 +410,7 @@
 				D102E7CF28F7A74B0051EB1F /* please.riv in Resources */,
 				B2C4E84B2858108000731F12 /* Assets.xcassets in Resources */,
 				D162182E28F8D0F000EAED92 /* FredokaOne-Regular.ttf in Resources */,
+				F315674F28FDEC9E005AF020 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +476,8 @@
 				D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */,
 				B2C4E8682858199B00731F12 /* ProfileView.swift in Sources */,
 				D18FE65228F9C75700C5A572 /* HowItWorksView.swift in Sources */,
+				F315675328FDF875005AF020 /* ViewControl.swift in Sources */,
+				F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */,
 				B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */,
 				D18FE65528F9CCA000C5A572 /* GreetingView.swift in Sources */,
 				B2C4E861285811CB00731F12 /* MainTabView.swift in Sources */,
@@ -599,7 +610,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"golden3/Preview Content\"";
-				DEVELOPMENT_TEAM = PMGUKN8NLP;
+				DEVELOPMENT_TEAM = ZHUT4C42FU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = golden3/Info.plist;
@@ -614,7 +625,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.palmer.golden3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.everettens.golden3;
 				PRODUCT_NAME = golden3;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -631,7 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"golden3/Preview Content\"";
-				DEVELOPMENT_TEAM = PMGUKN8NLP;
+				DEVELOPMENT_TEAM = ZHUT4C42FU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = golden3/Info.plist;
@@ -646,7 +657,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.palmer.golden3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.everettens.golden3;
 				PRODUCT_NAME = golden3;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -678,7 +689,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */ = {
+		D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios.git";
 			requirement = {
@@ -691,7 +702,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		D18FE66928FA5AF900C5A572 /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */;
+			package = D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */;
 			productName = RiveRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */

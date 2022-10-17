@@ -6,8 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    @State var email = ""
+    @State var password = ""
+    @State var passwordConfirmation = ""
+    
+    @State var authProcessing = false
+    @State var authProcessingErrorMsg = ""
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -42,12 +53,14 @@ struct LoginView: View {
                             .foregroundColor(.white)
                         
                     }
-                    LoginInput()
+                    //LoginInput()
+                    SignUpCredentialFields(email: $email, password: $password, passwordConfirmation: $passwordConfirmation)
                     //Login button linked to Login Page
-                    NavigationLink{
-                        HowItWorksView()
-                            .navigationBarHidden(true)
-                    } label: {
+                    Button(action: {
+                        //Sign up user to firebase
+                        signUpUser(userEmail: email, userPassword: password)
+                        
+                    }) {
                         ZStack{
                             Rectangle()
                                 .frame(width: 280, height: 60)
@@ -60,6 +73,37 @@ struct LoginView: View {
                                 .foregroundColor(.white)
                         }
                     }
+                    // need to move " get started" button until after firebase has created account
+                    // ^ solved. done
+                    // feel free to delete below. this is being replaced by a Button(action: ){} to work with ViewRouter
+                    
+//                    NavigationLink{
+//
+//                        HowItWorksView()
+//                            .navigationBarHidden(true)
+//                    } label: {
+//                        ZStack{
+//                            Rectangle()
+//                                .frame(width: 280, height: 60)
+//                                .cornerRadius(50)
+//                                .foregroundColor(.purple)
+//                                .padding(.top, 25)
+//                            Text("Get Started")
+//                                .font(Font.custom("FredokaOne-Regular", size: 20))
+//                                .padding(.top, 25)
+//                                .foregroundColor(.white)
+//                        }
+//                    }
+                    
+                    
+                    // Prevent user from creating account w/o email and password
+                    .disabled(!authProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
+                    if authProcessing{
+                        ProgressView()
+                    }
+                    if !authProcessingErrorMsg.isEmpty{
+                        Text("Account creation failed: \(authProcessingErrorMsg)")
+                    }
                     
                     HStack{
                         Text("Already have an account?")
@@ -67,25 +111,97 @@ struct LoginView: View {
                             .padding(.top, 1)
                             .foregroundColor(.white)
                         //Login button linked to Login Page
-                        NavigationLink{
-                            SignupView()
-                                .navigationBarHidden(true)
-                        } label: {
-                            
-                                Text("Login")
+                        Button(action: {
+                            viewRouter.currentPage = .signUpPage
+                        }){
+                            ZStack{
+                                Text("Log in")
                                     .font(Font.custom("FredokaOne-Regular", size: 13))
                                     .padding(.top, 1)
                                     .foregroundColor(.purple)
-                            
+                            }
                         }
-                        
                     }
                 }
             }
 
         }
+        
+    }
+    // Adds user to firebase
+    func signUpUser(userEmail: String, userPassword: String){
+        authProcessing = true
+        Auth.auth().createUser(withEmail: userEmail, password: userPassword) {
+            authResult, error in guard error == nil else{
+                authProcessingErrorMsg = error!.localizedDescription
+                authProcessing = false
+                return
+            }
+        
+            switch authResult {
+            case .none:
+                print("Could not create account.")
+                authProcessing = false
+            case .some(_):
+                print("New Account Created!")
+                authProcessing = false
+                viewRouter.currentPage = .howItWorksPage
+            }
+        }
     }
 }
+
+
+struct SignUpCredentialFields: View{
+    
+    @Binding var email: String
+    @Binding var password: String
+    @Binding var passwordConfirmation: String
+    
+    var body: some View{
+        Group {
+            
+            // Fields for sign up, can add more (username, name, etc) moving forward but this is the
+            // base line->email,pass,passConfirm
+            
+//            // First Name
+//            TextField("First Name", text: $firstname).textFieldStyle(RoundedBorderTextFieldStyle())
+//                .padding(.horizontal, 65)
+//                .padding(.vertical, 3)
+//                .font(Font.custom("FredokaOne-Regular", size: 16))
+//            // Last Name
+//            TextField("Last Name", text: $lastname).textFieldStyle(RoundedBorderTextFieldStyle())
+//                .padding(.horizontal, 65)
+//                .padding(.vertical, 3)
+//                .font(Font.custom("FredokaOne-Regular", size: 16))
+//            // Username
+//            TextField("Username", text: $username).textFieldStyle(RoundedBorderTextFieldStyle())
+//                .padding(.horizontal, 65)
+//                .padding(.vertical, 3)
+//                .font(Font.custom("FredokaOne-Regular", size: 16))
+            
+            // Email
+            TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 65)
+                .padding(.vertical, 3)
+                .font(Font.custom("FredokaOne-Regular", size: 16))
+            // Password
+            SecureField("Password", text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 65)
+                .padding(.vertical, 3)
+                .font(Font.custom("FredokaOne-Regular", size: 16))
+            // Confirm Password
+            SecureField("Confirm Password", text: $passwordConfirmation).textFieldStyle(RoundedBorderTextFieldStyle())
+                .border(Color.red, width: passwordConfirmation != password ? 1:0)
+                .padding(.horizontal, 65)
+                .padding(.vertical, 3)
+                .font(Font.custom("FredokaOne-Regular", size: 16))
+                
+        }
+    }
+
+}
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
