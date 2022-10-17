@@ -14,6 +14,10 @@ import SwiftUI
 // at the top of each page:
 //      @EnvironmentObject var viewRouter: ViewRouter
 // add that page to ViewRouter.swift and ViewControl.swift/enum Page in the format shown
+//
+// to change views, instead of calling a page like: SomePage() instead do:
+//      viewRouter.currentPage = .someDestinationPage
+//
 
 class ViewRouter: ObservableObject {
     
