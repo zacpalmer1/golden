@@ -47,7 +47,7 @@ struct ContentView: View {
                     // username will be the users unique username
                     Text("username")
                         .font(Font.custom("FredokaOne-Regular", size: 18))
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .padding(.top, 85)
                 }
             
@@ -64,7 +64,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
-            GreetingView()
+            ContentView()
             
         }
         

@@ -21,18 +21,24 @@ struct SignupView: View {
                         
                     } label:{
                         Rectangle()
-                            .frame(width:300, height: 70)
+                            .frame(width:320, height: 70)
                             .cornerRadius(20)
                             .padding(.bottom)
                             .foregroundColor(.white)
-                            .opacity(0.6)
+                            .opacity(0.4)
                     }
-                    Text("Sign in with Apple")
-                        .foregroundColor(.white)
-                        .font(Font.custom("FredokaOne-Regular", size: 23))
-                        .padding(.bottom)
-                        .padding(.leading, 45)
-                    
+                    HStack{
+                        Image("apple")
+                            .resizable()
+                            .frame(width:40, height:40)
+                            .padding(.bottom)
+                            .padding(.trailing, 5)
+                        Text("Sign in with Apple")
+                            .foregroundColor(.white)
+                            .font(Font.custom("FredokaOne-Regular", size: 23))
+                            .padding(.bottom)
+                            .padding(.leading, 15)
+                    }
                     
                 }
                 ZStack{
@@ -40,19 +46,25 @@ struct SignupView: View {
                         
                     } label:{
                         Rectangle()
-                            .frame(width:300, height: 70)
+                            .frame(width:320, height: 70)
                             .cornerRadius(20)
                             .padding(.bottom)
                             .foregroundColor(.white)
-                            .opacity(0.6)
+                            .opacity(0.4)
                         
                     }
-                    Text("Sign in with Google")
-                        .foregroundColor(.white)
-                        .font(Font.custom("FredokaOne-Regular", size: 23))
-                        .padding(.bottom)
-                        .padding(.leading, 45)
-                    
+                    HStack{
+                        Image("google")
+                            .resizable()
+                            .frame(width: 40, height:40)
+                            .padding(.bottom)
+                            .padding(.leading, 10)
+                        Text("Sign in with Google")
+                            .foregroundColor(.white)
+                            .font(Font.custom("FredokaOne-Regular", size: 23))
+                            .padding(.bottom)
+                            .padding(.leading, 15)
+                    }
                 }
                 SignupInput()
                     .padding(.top)
@@ -66,10 +78,10 @@ struct SignupView: View {
                             .frame(width: 280, height: 60)
                             .cornerRadius(50)
                             .foregroundColor(.purple)
-                            .padding(.top, 15)
+                            .padding(.top, 35)
                         Text("Login")
                             .font(Font.custom("FredokaOne-Regular", size: 20))
-                            .padding(.top, 11)
+                            .padding(.top, 35)
                             .foregroundColor(.white)
                     }
                 }
@@ -77,7 +89,8 @@ struct SignupView: View {
                 HStack{
                     Text("Dont have an account?")
                         .font(Font.custom("FredokaOne-Regular", size: 13))
-                        .padding(.top, 20)
+                        .padding(.top, 1)
+                        .foregroundColor(.white)
                     //Login button linked to Login Page
                     NavigationLink{
                         LoginView()
@@ -86,7 +99,7 @@ struct SignupView: View {
                         ZStack{
                             Text("Sign Up")
                                 .font(Font.custom("FredokaOne-Regular", size: 13))
-                                .padding(.top, 18)
+                                .padding(.top, 1)
                                 .foregroundColor(.purple)
                         }
                     }

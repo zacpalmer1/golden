@@ -29,19 +29,9 @@ struct MainTabView: View {
                     }
                     
                         .tag(0)
-                    ClockView()
-                        .onTapGesture {
-                            self.selectIndex = 1
-                        }
-                        .tabItem{
-                        //Image("time")
-                           // .resizable()
-                           // .frame(width:50, height: 50)
-                            
-                                
-                    }
+                   
                     
-                        .tag(1)
+                        
                     ActualView()
                         .onTapGesture {
                             self.selectIndex = 2
@@ -57,6 +47,7 @@ struct MainTabView: View {
                 }
                 .onAppear(){
                     UITabBar.appearance().barTintColor = .white
+                    
                 }
                 .background(Color.gray)
                     

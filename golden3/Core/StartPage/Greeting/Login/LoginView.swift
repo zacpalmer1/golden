@@ -15,8 +15,8 @@ struct LoginView: View {
                 VStack{
                     Text("Create Your Profile")
                         .font(Font.custom("FredokaOne-Regular", size: 50))
-                        .padding(.trailing, 60)
-                        .padding(.bottom, 10)
+                        .padding(.trailing, 31)
+                        .padding(.bottom, 1)
                         .foregroundColor(.white)
                     ZStack{
                         Button{
@@ -25,20 +25,20 @@ struct LoginView: View {
                             Circle()
                                 .foregroundColor(.white)
                                 .frame(width: 70, height: 70)
-                                .padding(.trailing, 270)
+                                .padding(.trailing, 240)
                                 .padding(.bottom, 0)
                                 .opacity(0.5)
                         }
                         Text("+")
                             .foregroundColor(.white)
                             .font(Font.custom("FredokaOne-Regular", size: 60))
-                            .padding(.trailing, 270)
+                            .padding(.trailing, 240)
                             .padding(.bottom, 11)
                         
                         
                         Text("Profile Picture")
                             .font(Font.custom("FredokaOne-Regular", size: 20))
-                            .padding(.trailing)
+                            .padding(.leading, 10)
                             .foregroundColor(.white)
                         
                     }
@@ -53,10 +53,10 @@ struct LoginView: View {
                                 .frame(width: 280, height: 60)
                                 .cornerRadius(50)
                                 .foregroundColor(.purple)
-                                .padding(.top, 15)
+                                .padding(.top, 25)
                             Text("Get Started")
                                 .font(Font.custom("FredokaOne-Regular", size: 20))
-                                .padding(.top, 11)
+                                .padding(.top, 25)
                                 .foregroundColor(.white)
                         }
                     }
@@ -64,7 +64,7 @@ struct LoginView: View {
                     HStack{
                         Text("Already have an account?")
                             .font(Font.custom("FredokaOne-Regular", size: 13))
-                            .padding(.top)
+                            .padding(.top, 1)
                             .foregroundColor(.white)
                         //Login button linked to Login Page
                         NavigationLink{
@@ -74,7 +74,7 @@ struct LoginView: View {
                             
                                 Text("Login")
                                     .font(Font.custom("FredokaOne-Regular", size: 13))
-                                    .padding(.top, 15)
+                                    .padding(.top, 1)
                                     .foregroundColor(.purple)
                             
                         }

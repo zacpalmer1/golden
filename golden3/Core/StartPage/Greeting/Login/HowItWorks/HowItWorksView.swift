@@ -15,7 +15,7 @@ struct HowItWorksView: View {
                 
                 Text("Here's How It Works")
                     .font(Font.custom("FredokaOne-Regular", size: 60))
-                    .padding(.trailing, 30)
+                    .padding(.trailing, 0)
                     .padding(.bottom)
                     .foregroundColor(.white)
                 VStack{
