@@ -10,6 +10,9 @@
 import SwiftUI
 
 struct GreetingView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    //@EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         // Allows us to switch between pages
         NavigationView{

@@ -11,6 +11,8 @@ import Firebase
 struct SignupView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
+    //@EnvironmentObject var viewModel: AuthViewModel
+
     
     @State var email = ""
     @State var password = ""
@@ -94,6 +96,20 @@ struct SignupView: View {
                             .foregroundColor(.white)
                     }
                 }
+                
+                // add to commit
+                .disabled(!authProcessing && !email.isEmpty && !password.isEmpty ? false : true)
+                if authProcessing{
+                    ProgressView()
+                }
+                if !authProcessingErrorMsg.isEmpty{
+                    Text("Failed Logging in: \(authProcessingErrorMsg)")
+                        .foregroundColor(.red)
+                }
+                
+                //
+                
+                
                 HStack{
                     Text("Dont have an account?")
                         .font(Font.custom("FredokaOne-Regular", size: 13))
@@ -108,6 +124,7 @@ struct SignupView: View {
                                 .font(Font.custom("FredokaOne-Regular", size: 13))
                                 .padding(.top, 1)
                                 .foregroundColor(.purple)
+                            
                         }
                     }
    
@@ -136,7 +153,7 @@ struct SignupView: View {
                 print("Signed in as: \(email)")
                 authProcessing = false
                 withAnimation {
-                    viewRouter.currentPage = .contentPage
+                    viewRouter.currentPage = .howItWorksPage
                 }
             }
         }

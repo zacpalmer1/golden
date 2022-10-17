@@ -10,6 +10,8 @@ import SwiftUI
 struct HowItWorksView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
+    //@EnvironmentObject var viewModel: AuthViewModel
+
 
     var body: some View {
         ZStack{

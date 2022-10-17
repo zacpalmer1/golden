@@ -11,6 +11,11 @@ import Firebase
 struct LoginView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
+    //@EnvironmentObject var viewModel: AuthViewModel
+    
+    //@State var firstName = ""
+    // @State var lastname = ""
+    @State var username = ""
     
     @State var email = ""
     @State var password = ""
@@ -54,11 +59,11 @@ struct LoginView: View {
                         
                     }
                     //LoginInput()
-                    SignUpCredentialFields(email: $email, password: $password, passwordConfirmation: $passwordConfirmation)
+                    SignUpCredentialFields(username: $username, email: $email, password: $password, passwordConfirmation: $passwordConfirmation)
                     //Login button linked to Login Page
                     Button(action: {
                         //Sign up user to firebase
-                        signUpUser(userEmail: email, userPassword: password)
+                        signUpUser(userEmail: email, userPassword: password, username: username)
                         
                     }) {
                         ZStack{
@@ -113,6 +118,7 @@ struct LoginView: View {
                         //Login button linked to Login Page
                         Button(action: {
                             viewRouter.currentPage = .signUpPage
+                            
                         }){
                             ZStack{
                                 Text("Log in")
@@ -129,14 +135,25 @@ struct LoginView: View {
         
     }
     // Adds user to firebase
-    func signUpUser(userEmail: String, userPassword: String){
+    func signUpUser(userEmail: String, userPassword: String, username: String){
         authProcessing = true
         Auth.auth().createUser(withEmail: userEmail, password: userPassword) {
-            authResult, error in guard error == nil else{
-                authProcessingErrorMsg = error!.localizedDescription
+            authResult, error in
+            if let error = error{
+                authProcessingErrorMsg = error.localizedDescription
                 authProcessing = false
                 return
             }
+            
+            guard let user = authResult?.user else {return}
+            
+            
+//            authResult, error in guard error == nil else{
+//                authProcessingErrorMsg = error!.localizedDescription
+//                authProcessing = false
+//                return
+//            }
+            //let data = ["email": email, "username": username.lowercase(), "uid": user.uid]
         
             switch authResult {
             case .none:
@@ -146,7 +163,91 @@ struct LoginView: View {
                 print("New Account Created!")
                 authProcessing = false
                 viewRouter.currentPage = .howItWorksPage
+                
             }
+            //
+            
+            
+            
+            mainInstance.name = username
+            
+//            let userData = Auth.auth().currentUser
+//            if let userData = userData {
+//              // The user's ID, unique to the Firebase project.
+//              // Do NOT use this value to authenticate with your backend server,
+//              // if you have one. Use getTokenWithCompletion:completion: instead.
+//              let uid = userData.uid
+//              let email = userData.email
+//              //let photoURL = user.photoURL
+//              var multiFactorString = "MultiFactor: "
+//              for info in user.multiFactor.enrolledFactors {
+//                multiFactorString += info.displayName ?? "[DispayName]"
+//                multiFactorString += " "
+//              }
+//              // ...
+//            }
+//
+//            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+//            changeRequest?.displayName = username
+//            changeRequest?.commitChanges {
+//                error in
+//                if let error = error{
+//                    authProcessingErrorMsg = error.localizedDescription
+//                    authProcessing = false
+//                    return
+//                }
+//            }
+            
+            
+            //-----------------------testing------------------------//
+            
+            
+//            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+//            changeRequest?.displayName = username
+//
+//            changeRequest?.commitChanges {
+//                error in
+//                if error == nil {
+//                    print("DEBUG: User display name changed to: \(username)")
+//
+//                } else {
+//                    print("Error: \(error!.localizedDescription)")
+//                }
+//            }
+            
+            
+            
+//            guard let uid = Auth.auth().currentUser?.uid else { return }
+//            let databaseRef = Firebase.database().reference().child("users/profile/\(uid)")
+//
+//            let userData = [
+//                "email": email,
+//                "username": username.lowercased(),
+//                "uid": user.uid
+//            ] as [String: Any]
+//
+//            databaseRef.setValue(userData) {
+//                error, ref in
+//                completion(error == nil)
+//            }
+            
+//            let data = ["email": email,
+//                        "username": username.lowercased(),
+//                        "uid": user.uid] as [String: Any]
+//            Firestore.firestore().collection("users")
+//                .document(user.uid)
+//                .setData(data) { _ in
+//                    print("DEBUG: Did upload user data")
+//                }
+            
+            
+            
+            
+            //--------------------testing----------------------//
+            
+            
+            
+            
         }
     }
 }
@@ -154,6 +255,7 @@ struct LoginView: View {
 
 struct SignUpCredentialFields: View{
     
+    @Binding var username: String
     @Binding var email: String
     @Binding var password: String
     @Binding var passwordConfirmation: String
@@ -164,11 +266,11 @@ struct SignUpCredentialFields: View{
             // Fields for sign up, can add more (username, name, etc) moving forward but this is the
             // base line->email,pass,passConfirm
             
-//            // First Name
-//            TextField("First Name", text: $firstname).textFieldStyle(RoundedBorderTextFieldStyle())
-//                .padding(.horizontal, 65)
-//                .padding(.vertical, 3)
-//                .font(Font.custom("FredokaOne-Regular", size: 16))
+            // First Name
+            TextField("Username", text: $username).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 65)
+                .padding(.vertical, 3)
+                .font(Font.custom("FredokaOne-Regular", size: 16))
 //            // Last Name
 //            TextField("Last Name", text: $lastname).textFieldStyle(RoundedBorderTextFieldStyle())
 //                .padding(.horizontal, 65)

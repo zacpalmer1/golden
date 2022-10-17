@@ -13,6 +13,8 @@ struct golden3App: App {
     
     @StateObject var viewRouter = ViewRouter()
     
+    //@StateObject var viewModel = AuthViewModel()
+    
     init(){
         FirebaseApp.configure()
     }
@@ -24,6 +26,10 @@ struct golden3App: App {
             //Feel free to delete below, showing before and after navigation syntax
             //GreetingView()
             
+            
         }
     }
 }
+
+
+

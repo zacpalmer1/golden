@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		72F1BEED5C9D4CBA8397F26F /* Pods_golden3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C939B55FC512A2B1B9871FB1 /* Pods_golden3.framework */; };
-		B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D939B28C68C20009D7DE6 /* LoginInput.swift */; };
 		B23F511228590E360080FE33 /* ActualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F511128590E360080FE33 /* ActualView.swift */; };
 		B2C4E8472858107F00731F12 /* golden3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E8462858107F00731F12 /* golden3App.swift */; };
 		B2C4E8492858107F00731F12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E8482858107F00731F12 /* ContentView.swift */; };
@@ -28,15 +27,16 @@
 		D18FE65E28F9EFDB00C5A572 /* BackgroundAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18FE65D28F9EFDB00C5A572 /* BackgroundAnimated.swift */; };
 		D18FE66A28FA5AF900C5A572 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D18FE66928FA5AF900C5A572 /* RiveRuntime */; };
 		D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3688F28F8DFA900BF016F /* LoginView.swift */; };
-		D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689528F8E5A900BF016F /* SignupInput.swift */; };
 		D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689728F8E6AC00BF016F /* SignupView.swift */; };
 		F315674F28FDEC9E005AF020 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F315674E28FDEC9E005AF020 /* GoogleService-Info.plist */; };
 		F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675028FDF82E005AF020 /* ViewRouter.swift */; };
 		F315675328FDF875005AF020 /* ViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675228FDF875005AF020 /* ViewControl.swift */; };
+		F36B7E1228FE28150077BAFF /* InfoInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = F36B7E1128FE28150077BAFF /* InfoInfo.plist */; };
+		F36B7E1828FE29B20077BAFF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B7E1728FE29B20077BAFF /* AuthViewModel.swift */; };
+		F36B7E1A28FF0EE50077BAFF /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B7E1928FF0EE50077BAFF /* global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B20D939B28C68C20009D7DE6 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		B23F511128590E360080FE33 /* ActualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualView.swift; sourceTree = "<group>"; };
 		B2C4E8432858107F00731F12 /* golden3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golden3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4E8462858107F00731F12 /* golden3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golden3App.swift; sourceTree = "<group>"; };
@@ -58,13 +58,14 @@
 		D18FE65428F9CCA000C5A572 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		D18FE65A28F9EE1400C5A572 /* loopbackground.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = loopbackground.riv; sourceTree = "<group>"; };
 		D18FE65D28F9EFDB00C5A572 /* BackgroundAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimated.swift; sourceTree = "<group>"; };
-		D1D3688A28F8D2F600BF016F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D1D3688F28F8DFA900BF016F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		D1D3689528F8E5A900BF016F /* SignupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInput.swift; sourceTree = "<group>"; };
 		D1D3689728F8E6AC00BF016F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F315674E28FDEC9E005AF020 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F315675028FDF82E005AF020 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		F315675228FDF875005AF020 /* ViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControl.swift; sourceTree = "<group>"; };
+		F36B7E1128FE28150077BAFF /* InfoInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoInfo.plist; sourceTree = "<group>"; };
+		F36B7E1728FE29B20077BAFF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		F36B7E1928FF0EE50077BAFF /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		B20D939A28C68BEC009D7DE6 /* StartPage */ = {
 			isa = PBXGroup;
 			children = (
+				D18FE65028F9C72F00C5A572 /* HowItWorks */,
 				D18FE65328F9CC6800C5A572 /* Greeting */,
 			);
 			path = StartPage;
@@ -100,6 +102,7 @@
 		B2C4E83A2858107F00731F12 = {
 			isa = PBXGroup;
 			children = (
+				F36B7E1128FE28150077BAFF /* InfoInfo.plist */,
 				B2C4E8452858107F00731F12 /* golden3 */,
 				B2C4E8442858107F00731F12 /* Products */,
 				E4FA887192D594FDA5433307 /* Pods */,
@@ -121,7 +124,6 @@
 				B2C4E8462858107F00731F12 /* golden3App.swift */,
 				F315675028FDF82E005AF020 /* ViewRouter.swift */,
 				F315674E28FDEC9E005AF020 /* GoogleService-Info.plist */,
-				D1D3688A28F8D2F600BF016F /* Info.plist */,
 				B2C4E857285810F400731F12 /* Extensions */,
 				B2C4E856285810F200731F12 /* Model */,
 				B2C4E855285810F100731F12 /* Service */,
@@ -130,6 +132,7 @@
 				B2C4E8482858107F00731F12 /* ContentView.swift */,
 				B2C4E84A2858108000731F12 /* Assets.xcassets */,
 				B2C4E84C2858108000731F12 /* Preview Content */,
+				F36B7E1928FF0EE50077BAFF /* global.swift */,
 			);
 			path = golden3;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				F315675228FDF875005AF020 /* ViewControl.swift */,
+				F36B7E1328FE28850077BAFF /* Authentication */,
 				D18FE65C28F9EFBC00C5A572 /* Background */,
 				D162182828F8C0C200EAED92 /* ProjectFonts */,
 				B20D939A28C68BEC009D7DE6 /* StartPage */,
@@ -282,8 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				D18FE65428F9CCA000C5A572 /* GreetingView.swift */,
-				D1D3689128F8DFB700BF016F /* Login */,
-				D1D3689228F8DFC600BF016F /* SignUp */,
 			);
 			path = Greeting;
 			sourceTree = "<group>";
@@ -303,25 +305,6 @@
 			path = Background;
 			sourceTree = "<group>";
 		};
-		D1D3689128F8DFB700BF016F /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				B20D939B28C68C20009D7DE6 /* LoginInput.swift */,
-				D1D3688F28F8DFA900BF016F /* LoginView.swift */,
-				D18FE65028F9C72F00C5A572 /* HowItWorks */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		D1D3689228F8DFC600BF016F /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				D1D3689528F8E5A900BF016F /* SignupInput.swift */,
-				D1D3689728F8E6AC00BF016F /* SignupView.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
 		E4FA887192D594FDA5433307 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +320,32 @@
 				C939B55FC512A2B1B9871FB1 /* Pods_golden3.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F36B7E1328FE28850077BAFF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F36B7E1628FE28AB0077BAFF /* ViewModels */,
+				F36B7E1428FE288D0077BAFF /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F36B7E1428FE288D0077BAFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1D3688F28F8DFA900BF016F /* LoginView.swift */,
+				D1D3689728F8E6AC00BF016F /* SignupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F36B7E1628FE28AB0077BAFF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F36B7E1728FE29B20077BAFF /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +420,7 @@
 				B2C4E84B2858108000731F12 /* Assets.xcassets in Resources */,
 				D162182E28F8D0F000EAED92 /* FredokaOne-Regular.ttf in Resources */,
 				F315674F28FDEC9E005AF020 /* GoogleService-Info.plist in Resources */,
+				F36B7E1228FE28150077BAFF /* InfoInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,15 +480,15 @@
 				B2C4E85F2858119A00731F12 /* FeedView.swift in Sources */,
 				B23F511228590E360080FE33 /* ActualView.swift in Sources */,
 				D18FE65E28F9EFDB00C5A572 /* BackgroundAnimated.swift in Sources */,
+				F36B7E1828FE29B20077BAFF /* AuthViewModel.swift in Sources */,
 				D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */,
 				B2C4E8472858107F00731F12 /* golden3App.swift in Sources */,
 				B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */,
-				D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */,
 				B2C4E8682858199B00731F12 /* ProfileView.swift in Sources */,
+				F36B7E1A28FF0EE50077BAFF /* global.swift in Sources */,
 				D18FE65228F9C75700C5A572 /* HowItWorksView.swift in Sources */,
 				F315675328FDF875005AF020 /* ViewControl.swift in Sources */,
 				F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */,
-				B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */,
 				D18FE65528F9CCA000C5A572 /* GreetingView.swift in Sources */,
 				B2C4E861285811CB00731F12 /* MainTabView.swift in Sources */,
 			);
@@ -613,11 +623,11 @@
 				DEVELOPMENT_TEAM = ZHUT4C42FU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = golden3/Info.plist;
+				INFOPLIST_FILE = /Users/everettens/Desktop/golden3/InfoInfo.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -645,11 +655,11 @@
 				DEVELOPMENT_TEAM = ZHUT4C42FU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = golden3/Info.plist;
+				INFOPLIST_FILE = /Users/everettens/Desktop/golden3/InfoInfo.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
