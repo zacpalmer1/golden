@@ -93,7 +93,18 @@ struct SignupView: View {
                             .padding(.top, 35)
                             .foregroundColor(.white)
                     }
+                    
                 }
+                    
+                    // Prevent user from creating account w/o email and password
+                    .disabled(!authProcessing && !email.isEmpty && !password.isEmpty  ? false : true)
+                    if authProcessing{
+                        ProgressView()
+                    }
+                    if !authProcessingErrorMsg.isEmpty{
+                        Text("Account creation failed: \(authProcessingErrorMsg)")
+                }
+                    
                 HStack{
                     Text("Dont have an account?")
                         .font(Font.custom("FredokaOne-Regular", size: 13))
