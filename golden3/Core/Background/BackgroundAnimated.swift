@@ -15,6 +15,7 @@ import RiveRuntime
 
 struct BackgroundAnimated: View {
     var body: some View {
+        
         RiveViewModel(fileName: "loopbackground").view()
             .ignoresSafeArea(.all)
             .blur(radius: 40)
@@ -22,6 +23,9 @@ struct BackgroundAnimated: View {
             // Only purpose is to allow program to run while RiveViewModel is not active
         }
         .background(.black)
+        
+        
+
     }
 }
 

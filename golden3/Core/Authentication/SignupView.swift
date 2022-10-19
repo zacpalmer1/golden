@@ -17,6 +17,7 @@ struct SignupView: View {
     
     @State var authProcessing = false
     @State var authProcessingErrorMsg = ""
+    
     var body: some View {
         ZStack{
             BackgroundAnimated()
@@ -139,6 +140,9 @@ struct SignupView: View {
                 authProcessingErrorMsg = error!.localizedDescription
                 return
             }
+            print("DEBUG: User signed in with email: \(userEmail)")
+            
+            // In the case that Firebase sends "some" result -> continue to howItWorksPage
             switch authResult {
             case .none:
                 print("Could not sign into account")

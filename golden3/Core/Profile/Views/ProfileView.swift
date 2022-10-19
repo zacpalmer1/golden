@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
+        
         VStack{
             HStack{
                 Image("userProfileImage")

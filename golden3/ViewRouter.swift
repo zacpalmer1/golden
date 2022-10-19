@@ -10,7 +10,7 @@ import SwiftUI
 // the enum page connects to Core/ViewControl.swift as a nav controller
 
 
-// Instructions for adding new Views/pages
+// ------> Instructions for adding new Views/pages <-------
 // at the top of each page:
 //      @EnvironmentObject var viewRouter: ViewRouter
 // add that page to ViewRouter.swift and ViewControl.swift/enum Page in the format shown
@@ -18,6 +18,9 @@ import SwiftUI
 // to change views, instead of calling a page like: SomePage() instead do:
 //      viewRouter.currentPage = .someDestinationPage
 //
+//
+
+
 
 class ViewRouter: ObservableObject {
     
@@ -32,6 +35,9 @@ enum Page {
     case signUpPage
     case howItWorksPage
     case contentPage
+    
+    
+    // add new page format:
     // case feedPage
     // case profilePage
     // case clockPage

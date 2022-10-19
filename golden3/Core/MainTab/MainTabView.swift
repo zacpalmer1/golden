@@ -4,12 +4,15 @@
 //
 //  Created by Zac Palmer on 6/13/22.
 //
-
+// ----This is the bottom navigation bar----
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @State private var selectIndex = 0
+    
     var body: some View {
+        
         ZStack {
             HStack(alignment: .bottom) {
                 

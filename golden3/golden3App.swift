@@ -17,11 +17,15 @@ struct golden3App: App {
         FirebaseApp.configure()
     }
     var body: some Scene {
+        let _ = print("APP_DEBUG: Application running.")
         WindowGroup {
             
             ViewControl().environmentObject(viewRouter)
             
+            
+            
             //Feel free to delete below, showing before and after navigation syntax
+            
             //GreetingView()
             
         }

@@ -10,7 +10,10 @@ import RiveRuntime
 
 
 struct ActualFeed: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
+        
         //Animated Background
         ZStack{
             BackgroundAnimated()
