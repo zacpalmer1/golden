@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ClockView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
+        
         Image("clockpage")
             .resizable()
             .ignoresSafeArea()

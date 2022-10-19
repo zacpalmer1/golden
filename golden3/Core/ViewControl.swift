@@ -14,6 +14,9 @@ struct ViewControl: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
+        // Debug statement showing .currentPage prints to console, helps if something crashes to know what view caused the crash
+        let _ = print("VIEW_DEBUG: ViewControl initialized showing \(viewRouter.currentPage).")
+
         switch viewRouter.currentPage{
         case .greetingPage:
             GreetingView()
@@ -25,7 +28,9 @@ struct ViewControl: View {
             HowItWorksView()
         case .contentPage:
             ContentView()
-    // format:
+            
+            
+    // add new page format:
     // case .newPage:
     //      NewView()
         

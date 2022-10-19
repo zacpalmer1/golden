@@ -10,7 +10,10 @@
 import SwiftUI
 
 struct GreetingView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
+                
         // Allows us to switch between pages
         NavigationView{
             // Place BackgroundAnimated() behind Text and buttons

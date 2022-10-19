@@ -137,13 +137,16 @@ struct LoginView: View {
                 authProcessing = false
                 return
             }
-        
+            print("DEBUG: New User created with email: \(userEmail)")
+            //var authResult: AuthDataResult
+            
+            // In the case that Firebase sends "some" result -> continue to howItWorksPage
             switch authResult {
             case .none:
-                print("Could not create account.")
+                print("authResult: Could not create account.")
                 authProcessing = false
             case .some(_):
-                print("New Account Created!")
+                print("authResult: New Account Created with authResult: \(authResult)")
                 authProcessing = false
                 viewRouter.currentPage = .howItWorksPage
             }
@@ -179,6 +182,9 @@ struct SignUpCredentialFields: View{
 //                .padding(.horizontal, 65)
 //                .padding(.vertical, 3)
 //                .font(Font.custom("FredokaOne-Regular", size: 16))
+            
+            
+            
             
             // Email
             TextField("Email", text: $email).textFieldStyle(RoundedBorderTextFieldStyle())

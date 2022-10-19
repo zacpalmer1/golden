@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct PostRowView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
+        
         VStack{
             Image("behindpost")
                 .resizable()

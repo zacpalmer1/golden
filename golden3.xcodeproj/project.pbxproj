@@ -58,7 +58,7 @@
 		D18FE65428F9CCA000C5A572 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		D18FE65A28F9EE1400C5A572 /* loopbackground.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = loopbackground.riv; sourceTree = "<group>"; };
 		D18FE65D28F9EFDB00C5A572 /* BackgroundAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimated.swift; sourceTree = "<group>"; };
-		D1D3688A28F8D2F600BF016F /* InfoInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = InfoInfo.plist; sourceTree = "<group>"; };
+		D1D3688A28F8D2F600BF016F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1D3688F28F8DFA900BF016F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D1D3689528F8E5A900BF016F /* SignupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInput.swift; sourceTree = "<group>"; };
 		D1D3689728F8E6AC00BF016F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -84,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				D18FE65328F9CC6800C5A572 /* Greeting */,
+				D18FE65028F9C72F00C5A572 /* HowItWorks */,
 			);
 			path = StartPage;
 			sourceTree = "<group>";
@@ -121,7 +122,7 @@
 				B2C4E8462858107F00731F12 /* golden3App.swift */,
 				F315675028FDF82E005AF020 /* ViewRouter.swift */,
 				F315674E28FDEC9E005AF020 /* GoogleService-Info.plist */,
-				D1D3688A28F8D2F600BF016F /* InfoInfo.plist */,
+				D1D3688A28F8D2F600BF016F /* Info.plist */,
 				B2C4E857285810F400731F12 /* Extensions */,
 				B2C4E856285810F200731F12 /* Model */,
 				B2C4E855285810F100731F12 /* Service */,
@@ -146,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				F315675228FDF875005AF020 /* ViewControl.swift */,
+				F3370AFE28FF5B1B00712AF5 /* Authentication */,
 				D18FE65C28F9EFBC00C5A572 /* Background */,
 				D162182828F8C0C200EAED92 /* ProjectFonts */,
 				B20D939A28C68BEC009D7DE6 /* StartPage */,
@@ -282,8 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				D18FE65428F9CCA000C5A572 /* GreetingView.swift */,
-				D1D3689128F8DFB700BF016F /* Login */,
-				D1D3689228F8DFC600BF016F /* SignUp */,
+				D1D3689128F8DFB700BF016F /* Login(do not use) */,
+				D1D3689228F8DFC600BF016F /* SignUp(do not use) */,
 			);
 			path = Greeting;
 			sourceTree = "<group>";
@@ -303,23 +305,20 @@
 			path = Background;
 			sourceTree = "<group>";
 		};
-		D1D3689128F8DFB700BF016F /* Login */ = {
+		D1D3689128F8DFB700BF016F /* Login(do not use) */ = {
 			isa = PBXGroup;
 			children = (
 				B20D939B28C68C20009D7DE6 /* LoginInput.swift */,
-				D1D3688F28F8DFA900BF016F /* LoginView.swift */,
-				D18FE65028F9C72F00C5A572 /* HowItWorks */,
 			);
-			path = Login;
+			path = "Login(do not use)";
 			sourceTree = "<group>";
 		};
-		D1D3689228F8DFC600BF016F /* SignUp */ = {
+		D1D3689228F8DFC600BF016F /* SignUp(do not use) */ = {
 			isa = PBXGroup;
 			children = (
 				D1D3689528F8E5A900BF016F /* SignupInput.swift */,
-				D1D3689728F8E6AC00BF016F /* SignupView.swift */,
 			);
-			path = SignUp;
+			path = "SignUp(do not use)";
 			sourceTree = "<group>";
 		};
 		E4FA887192D594FDA5433307 /* Pods */ = {
@@ -337,6 +336,15 @@
 				C939B55FC512A2B1B9871FB1 /* Pods_golden3.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3370AFE28FF5B1B00712AF5 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D1D3688F28F8DFA900BF016F /* LoginView.swift */,
+				D1D3689728F8E6AC00BF016F /* SignupView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,7 +621,7 @@
 				DEVELOPMENT_TEAM = ZHUT4C42FU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Users/everettens/Documents/golden3/golden3/InfoInfo.plist;
+				INFOPLIST_FILE = golden3/InfoInfo.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,7 +653,7 @@
 				DEVELOPMENT_TEAM = ZHUT4C42FU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Users/everettens/Documents/golden3/golden3/InfoInfo.plist;
+				INFOPLIST_FILE = golden3/InfoInfo.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

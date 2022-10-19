@@ -10,4 +10,5 @@ target 'golden3' do
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'Firebase/Firestore'
+
 end
