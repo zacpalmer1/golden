@@ -11,7 +11,16 @@ import Firebase
 struct LoginView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
-    
+//    @EnvironmentObject var authViewModel: AuthViewModel
+//    @Published var userSession: FirebaseAuth.User?
+//
+//    //@ObservableObject var userSession: AuthViewModel
+//    init() {
+//        self.userSession = Auth.auth().currentUser
+//    }
+
+
+    @State var username = ""
     @State var email = ""
     @State var password = ""
     @State var passwordConfirmation = ""
@@ -54,7 +63,7 @@ struct LoginView: View {
                         
                     }
                     //LoginInput()
-                    SignUpCredentialFields(email: $email, password: $password, passwordConfirmation: $passwordConfirmation)
+                    SignUpCredentialFields(username: $username, email: $email, password: $password, passwordConfirmation: $passwordConfirmation)
                     //Login button linked to Login Page
                     Button(action: {
                         //Sign up user to firebase
@@ -137,6 +146,10 @@ struct LoginView: View {
                 authProcessing = false
                 return
             }
+            
+//            guard let user = authResult?.user else { return }
+//            self.userSession = user
+            
             print("DEBUG: New User created with email: \(userEmail)")
             //var authResult: AuthDataResult
             
@@ -157,6 +170,7 @@ struct LoginView: View {
 
 struct SignUpCredentialFields: View{
     
+    @Binding var username: String
     @Binding var email: String
     @Binding var password: String
     @Binding var passwordConfirmation: String
@@ -178,10 +192,10 @@ struct SignUpCredentialFields: View{
 //                .padding(.vertical, 3)
 //                .font(Font.custom("FredokaOne-Regular", size: 16))
 //            // Username
-//            TextField("Username", text: $username).textFieldStyle(RoundedBorderTextFieldStyle())
-//                .padding(.horizontal, 65)
-//                .padding(.vertical, 3)
-//                .font(Font.custom("FredokaOne-Regular", size: 16))
+            TextField("Username", text: $username).textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal, 65)
+                .padding(.vertical, 3)
+                .font(Font.custom("FredokaOne-Regular", size: 16))
             
             
             

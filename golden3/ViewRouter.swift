@@ -24,7 +24,7 @@ import SwiftUI
 
 class ViewRouter: ObservableObject {
     
-    @Published var currentPage: Page = .contentPage
+    @Published var currentPage: Page = .greetingPage
         
 }
 

@@ -11,6 +11,9 @@ import SwiftUI
 
 // this is a test try it
 struct ContentView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         NavigationView{
             

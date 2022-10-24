@@ -36,6 +36,7 @@
 		D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689728F8E6AC00BF016F /* SignupView.swift */; };
 		F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675028FDF82E005AF020 /* ViewRouter.swift */; };
 		F315675328FDF875005AF020 /* ViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675228FDF875005AF020 /* ViewControl.swift */; };
+		F39DE0BB29074FBE00225F49 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BA29074FBE00225F49 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		D1D3689728F8E6AC00BF016F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F315675028FDF82E005AF020 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		F315675228FDF875005AF020 /* ViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControl.swift; sourceTree = "<group>"; };
+		F39DE0BA29074FBE00225F49 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +362,7 @@
 			children = (
 				D1D3688F28F8DFA900BF016F /* LoginView.swift */,
 				D1D3689728F8E6AC00BF016F /* SignupView.swift */,
+				F39DE0BA29074FBE00225F49 /* AuthViewModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				982BF4D72906E70E00141B2C /* CameraView.swift in Sources */,
 				F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */,
 				B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */,
+				F39DE0BB29074FBE00225F49 /* AuthViewModel.swift in Sources */,
 				982BF4D029059C5500141B2C /* Post.swift in Sources */,
 				D18FE65528F9CCA000C5A572 /* GreetingView.swift in Sources */,
 				B2C4E861285811CB00731F12 /* MainTabView.swift in Sources */,
