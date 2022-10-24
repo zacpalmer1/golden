@@ -27,11 +27,12 @@ struct ProfileView: View {
                         .clipped()
                         .padding(.top)
                     
-                    Text("Jimmy").font(Font.custom("FredokaOne-Regular", size: 25)).padding(.top, 8).foregroundColor(.black)
+                    Text(mainInstance.name).font(Font.custom("FredokaOne-Regular", size: 25)).padding(.top, 8).foregroundColor(.black)
                     
-                    Text("@Jimbo").font(Font.custom("FredokaOne-Regular", size: 15))
-                        .padding(.top, -15)
+                    Text(mainInstance.name)
+                        .font(Font.custom("FredokaOne-Regular", size: 18))
                         .foregroundColor(.black)
+                        .padding(.top, 85)
         
                 }
                 Spacer()

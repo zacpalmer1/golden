@@ -67,7 +67,7 @@ struct LoginView: View {
                     //Login button linked to Login Page
                     Button(action: {
                         //Sign up user to firebase
-                        signUpUser(userEmail: email, userPassword: password)
+                        signUpUser(userEmail: email, userPassword: password, username: username)
                         
                     }) {
                         ZStack{
@@ -138,7 +138,7 @@ struct LoginView: View {
         
     }
     // Adds user to firebase
-    func signUpUser(userEmail: String, userPassword: String){
+    func signUpUser(userEmail: String, userPassword: String, username: String){
         authProcessing = true
         Auth.auth().createUser(withEmail: userEmail, password: userPassword) {
             authResult, error in guard error == nil else{
@@ -163,6 +163,8 @@ struct LoginView: View {
                 authProcessing = false
                 viewRouter.currentPage = .howItWorksPage
             }
+            
+            mainInstance.name = username
         }
     }
 }

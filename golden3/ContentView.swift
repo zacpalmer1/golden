@@ -14,6 +14,8 @@ struct ContentView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var viewModel: AuthViewModel
+    
+    
     var body: some View {
         NavigationView{
             
@@ -48,11 +50,17 @@ struct ContentView: View {
                         .frame(width:50, height:50)
                         .padding(.top, 55)
                     // username will be the users unique username
-                    Text("username")
+//                    Text("username")
+//                        .font(Font.custom("FredokaOne-Regular", size: 18))
+//                        .foregroundColor(.black)
+//                        .padding(.top, 85)
+                    
+                    Text(mainInstance.name)
                         .font(Font.custom("FredokaOne-Regular", size: 18))
                         .foregroundColor(.black)
                         .padding(.top, 85)
                 }
+                
             
             
             }
