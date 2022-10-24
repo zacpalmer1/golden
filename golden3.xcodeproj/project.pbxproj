@@ -38,6 +38,8 @@
 		F315675328FDF875005AF020 /* ViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675228FDF875005AF020 /* ViewControl.swift */; };
 		F39DE0BB29074FBE00225F49 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BA29074FBE00225F49 /* AuthViewModel.swift */; };
 		F39DE0BD290757E800225F49 /* globalusernamebs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BC290757E800225F49 /* globalusernamebs.swift */; };
+		F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BE29075C0900225F49 /* SearchView.swift */; };
+		F39DE0C129075C1C00225F49 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C029075C1C00225F49 /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		F315675228FDF875005AF020 /* ViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControl.swift; sourceTree = "<group>"; };
 		F39DE0BA29074FBE00225F49 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		F39DE0BC290757E800225F49 /* globalusernamebs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalusernamebs.swift; sourceTree = "<group>"; };
+		F39DE0BE29075C0900225F49 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = golden3/SearchView.swift; sourceTree = SOURCE_ROOT; };
+		F39DE0C029075C1C00225F49 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = golden3/SampleData.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +319,8 @@
 		D18FE65628F9D37D00C5A572 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				F39DE0BE29075C0900225F49 /* SearchView.swift */,
+				F39DE0C029075C1C00225F49 /* SampleData.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 				B2C4E8642858131900731F12 /* PostRowView.swift in Sources */,
 				B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */,
 				B2C4E8492858107F00731F12 /* ContentView.swift in Sources */,
+				F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */,
 				B2C4E85F2858119A00731F12 /* FeedView.swift in Sources */,
 				B23F511228590E360080FE33 /* ActualProfileView.swift in Sources */,
 				D18FE65E28F9EFDB00C5A572 /* BackgroundAnimated.swift in Sources */,
@@ -511,6 +518,7 @@
 				F315675328FDF875005AF020 /* ViewControl.swift in Sources */,
 				982BF4D72906E70E00141B2C /* CameraView.swift in Sources */,
 				F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */,
+				F39DE0C129075C1C00225F49 /* SampleData.swift in Sources */,
 				B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */,
 				F39DE0BB29074FBE00225F49 /* AuthViewModel.swift in Sources */,
 				982BF4D029059C5500141B2C /* Post.swift in Sources */,

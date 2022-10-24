@@ -34,15 +34,15 @@ struct MainTabView: View {
                         .tag(0)
                    
                     
-//                    SearchView()
-//                        .onTapGesture {
-//                            self.selectIndex = 1
-//                        }.tabItem{
-//                            Image("searchlogo")
-//                             .resizable()
-//                             .frame(width: 100, height: 100)
-//                            
-//                            
+                    SearchView()
+                        .onTapGesture {
+                            self.selectIndex = 1
+                        }.tabItem{
+                            Image("searchlogo")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                            
+                        }
                             
                     ActualProfileView()
                         .onTapGesture {
