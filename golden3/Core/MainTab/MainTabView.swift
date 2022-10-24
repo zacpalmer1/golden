@@ -23,10 +23,10 @@ struct MainTabView: View {
                             self.selectIndex = 0
                         }
                         .tabItem{
-                       // Image("homelogo")
-                         //  .resizable()
-                         //   .ignoresSafeArea()
-                          //  .frame(width: 50, height: 50)
+                       Image("homelogo")
+                         .resizable()
+                         .ignoresSafeArea()
+                          .frame(width: 50, height: 50)
                                 
                                 
                     }
@@ -35,14 +35,14 @@ struct MainTabView: View {
                    
                     
                         
-                    ActualView()
+                    ActualProfileView()
                         .onTapGesture {
                             self.selectIndex = 2
                         }
                         .tabItem{
-                       // Image("searchlogo")
-                               // .resizable()
-                               // .frame(width: 100, height: 100)
+                       Image("searchlogo")
+                        .resizable()
+                        .frame(width: 100, height: 100)
                                 
                     }
                         .tag(2)
@@ -55,6 +55,7 @@ struct MainTabView: View {
                 .background(Color.gray)
                     
             }
+            
             
         }
         

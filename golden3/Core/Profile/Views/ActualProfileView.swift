@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActualView: View {
+struct ActualProfileView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
@@ -25,6 +25,6 @@ struct ActualView: View {
 
 struct ActualView_Previews: PreviewProvider {
     static var previews: some View {
-        ActualView()
+        ActualProfileView()
     }
 }

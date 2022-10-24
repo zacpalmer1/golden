@@ -28,6 +28,9 @@ struct ViewControl: View {
             HowItWorksView()
         case .contentPage:
             ContentView()
+        case .cameraPage:
+            CameraView()
+            
             
             
     // add new page format:

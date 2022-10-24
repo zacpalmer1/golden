@@ -24,8 +24,8 @@ import SwiftUI
 
 class ViewRouter: ObservableObject {
     
-    @Published var currentPage: Page = .greetingPage
-    
+    @Published var currentPage: Page = .contentPage
+        
 }
 
 
@@ -35,7 +35,7 @@ enum Page {
     case signUpPage
     case howItWorksPage
     case contentPage
-    
+    case cameraPage
     
     // add new page format:
     // case feedPage
