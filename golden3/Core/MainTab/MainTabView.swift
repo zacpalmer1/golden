@@ -27,6 +27,10 @@ struct MainTabView: View {
 //                         .resizable()
 //                         .ignoresSafeArea()
 //                          .frame(width: 50, height: 50)
+                            Text("Home")
+                                .font(Font.custom("FredokaOne-Regular", size: 60))
+                                .padding(.trailing, 60)
+                                .foregroundColor(.white)
 
 
                     }
@@ -41,6 +45,10 @@ struct MainTabView: View {
                             Image("searchlogo")
                                 .resizable()
                                 .frame(width: 100, height: 100)
+                            Text("Search")
+                                .font(Font.custom("FredokaOne-Regular", size: 60))
+                                .padding(.trailing, 60)
+                                .foregroundColor(.white)
                             
                         }
                             
@@ -52,7 +60,11 @@ struct MainTabView: View {
 //                       Image("searchlogo")
 //                        .resizable()
 //                        .frame(width: 100, height: 100)
-                                
+                            
+                            Text("Profile")
+                                .font(Font.custom("FredokaOne-Regular", size: 60))
+                                .padding(.trailing, 60)
+                                .foregroundColor(.white)
                     }
                         .tag(2)
                         .background(Color.gray)
