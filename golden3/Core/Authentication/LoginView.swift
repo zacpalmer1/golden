@@ -76,7 +76,7 @@ struct LoginView: View {
                             .padding(.trailing, 240)
                             .padding(.bottom, 11)
                         
-                        
+                        //
 //                        Text("Profile Picture")
 //                            .font(Font.custom("FredokaOne-Regular", size: 20))
 //                            .padding(.leading, 10)
