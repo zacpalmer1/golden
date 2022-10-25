@@ -44,8 +44,20 @@ struct ProfileView: View {
                         .foregroundColor(.black)
                         .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
                 }
+                Spacer()
+                
             }
             Spacer()
+            Button {
+                viewRouter.currentPage = .greetingPage
+            } label: {
+                Text("Sign Out").font(.subheadline).bold()
+                    .font(Font.custom("FredokaOne-Regular", size: 18))
+                    .frame(width: 120, height: 32)
+                    .foregroundColor(.black)
+                    .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
+                    .padding(.bottom, 15)
+            }
             
         }
         
