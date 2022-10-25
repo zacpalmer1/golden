@@ -23,10 +23,10 @@ struct MainTabView: View {
                             self.selectIndex = 0
                         }
                         .tabItem{
-                       Image("homelogo")
-                         .resizable()
-                         .ignoresSafeArea()
-                          .frame(width: 50, height: 50)
+//                       Image("homelogo")
+//                         .resizable()
+//                         .ignoresSafeArea()
+//                          .frame(width: 50, height: 50)
                                 
                                 
                     }

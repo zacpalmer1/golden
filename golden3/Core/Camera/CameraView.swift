@@ -47,7 +47,7 @@ struct CameraView: View {
                         .padding(.leading)
                         Spacer()
                     } else {
-                        Button(action: {camera.isCameraTaken.toggle()}, label: {
+                        Button(action: camera.takePicture, label: {
                             
                             // Zstack for the circles to stack.
                             ZStack{
@@ -78,12 +78,13 @@ struct CameraView_Previews: PreviewProvider {
 }
 
 
-class Camera: ObservableObject{
+class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     @Published var isCameraTaken = false
     @Published var session = AVCaptureSession()
     @Published var alert = false
     @Published var output = AVCapturePhotoOutput()
     @Published var preview : AVCaptureVideoPreviewLayer!
+    @Published var currentCamera: AVCaptureDevice?
     func checkCameraAuthorization(){
         // Checks if camera has permissions.
         // TODO: See if specific user gave permissions (?)
@@ -107,9 +108,16 @@ class Camera: ObservableObject{
     func setUpCamera(){
         do{
             self.session.beginConfiguration()
-            let device = AVCaptureDevice.default(.builtInDualCamera,for: .video, position: .back)
+           // guard let device = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
+            guard let device = AVCaptureDevice.default(.builtInWideAngleCamera,for: .video, position: .back)
             
-            let input = try AVCaptureDeviceInput(device: device!)
+            else {
+                print("Error loading camera.")
+                
+                return
+            }
+            self.currentCamera = device
+            let input = try AVCaptureDeviceInput(device: currentCamera!)
             
             if self.session.canAddInput(input){
                 self.session.addInput(input)
@@ -126,6 +134,26 @@ class Camera: ObservableObject{
     
     func takePicture(){
         // TODO: Take photo.
+        DispatchQueue.global(qos: .background).async {
+            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            self.session.stopRunning()
+            
+            DispatchQueue.main.async {
+                withAnimation{self.isCameraTaken.toggle()}
+            }
+        }
+    }
+    
+    func reTake(){
+        
+    }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if error != nil{
+            return
+        }
+        print("Picture taken")
+        
     }
 }
 
