@@ -8,9 +8,11 @@
 import SwiftUI
 import Firebase
 class BS_Username{
+    
     var name: String
     init(name: String){
         self.name = name
     }
 }
 var mainInstance = BS_Username(name: "no username")
+var globalImage:UIImage? = nil

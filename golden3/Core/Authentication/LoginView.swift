@@ -28,6 +28,10 @@ struct LoginView: View {
     @State var authProcessing = false
     @State var authProcessingErrorMsg = ""
     
+    @State private var showImagePicker = false
+    @State private var selectedImage: UIImage?
+    @State private var profileImage: Image?
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -39,27 +43,48 @@ struct LoginView: View {
                         .padding(.bottom, 1)
                         .foregroundColor(.white)
                     ZStack{
+                        
                         Button{
-                            
+                            showImagePicker.toggle()
                         } label: {
-                            Circle()
-                                .foregroundColor(.white)
-                                .frame(width: 70, height: 70)
-                                .padding(.trailing, 240)
-                                .padding(.bottom, 0)
-                                .opacity(0.5)
+                            if let profileImage = profileImage {
+                                profileImage
+                                    .resizable()
+                                    .modifier(ProfileImageModifier())
+                            } else {
+                                Circle()
+                                    .foregroundColor(.white)
+                                    .frame(width: 70, height: 70)
+                                    //.padding(.trailing, 240)
+                                    .padding(.bottom, 0)
+                                    .opacity(0.5)
+                                Text("Profile Picture")
+                                    .font(Font.custom("FredokaOne-Regular", size: 20))
+                                    //.padding(.leading, 10)
+                                    .foregroundColor(.white)
+                                Text("+")
+                                    .foregroundColor(.white)
+                                    .font(Font.custom("FredokaOne-Regular", size: 60))
+                                    .padding(.leading, 10)
+                                    .padding(.bottom, 11)
+                            }
                         }
-                        Text("+")
+                        
+                        Text("")
                             .foregroundColor(.white)
                             .font(Font.custom("FredokaOne-Regular", size: 60))
                             .padding(.trailing, 240)
                             .padding(.bottom, 11)
                         
                         
-                        Text("Profile Picture")
-                            .font(Font.custom("FredokaOne-Regular", size: 20))
-                            .padding(.leading, 10)
-                            .foregroundColor(.white)
+//                        Text("Profile Picture")
+//                            .font(Font.custom("FredokaOne-Regular", size: 20))
+//                            .padding(.leading, 10)
+//                            .foregroundColor(.white)
+                        
+                    }
+                    .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+                        ImagePicker(selectedImage: $selectedImage )
                         
                     }
                     //LoginInput()
@@ -137,6 +162,10 @@ struct LoginView: View {
         }
         
     }
+    func loadImage() {
+        guard let selectedImage = selectedImage else {return}
+        profileImage = Image(uiImage: selectedImage)
+    }
     // Adds user to firebase
     func signUpUser(userEmail: String, userPassword: String, username: String){
         authProcessing = true
@@ -166,9 +195,18 @@ struct LoginView: View {
             
             mainInstance.name = username
         }
+        
     }
 }
 
+private struct ProfileImageModifier: ViewModifier {
+    func body(content: Content) -> some View{
+        content
+            .scaledToFill()
+            .frame(width: 100, height: 100)
+            .clipShape(Circle())
+    }
+}
 
 struct SignUpCredentialFields: View{
     
@@ -220,6 +258,8 @@ struct SignUpCredentialFields: View{
                 .font(Font.custom("FredokaOne-Regular", size: 16))
                 
         }
+        
+        
     }
 
 }

@@ -40,6 +40,7 @@
 		F39DE0BD290757E800225F49 /* globalusernamebs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BC290757E800225F49 /* globalusernamebs.swift */; };
 		F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BE29075C0900225F49 /* SearchView.swift */; };
 		F39DE0C129075C1C00225F49 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C029075C1C00225F49 /* SampleData.swift */; };
+		F39DE0C529077A7E00225F49 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C429077A7E00225F49 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		F39DE0BC290757E800225F49 /* globalusernamebs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalusernamebs.swift; sourceTree = "<group>"; };
 		F39DE0BE29075C0900225F49 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = golden3/SearchView.swift; sourceTree = SOURCE_ROOT; };
 		F39DE0C029075C1C00225F49 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = golden3/SampleData.swift; sourceTree = SOURCE_ROOT; };
+		F39DE0C429077A7E00225F49 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				D18FE65328F9CC6800C5A572 /* Greeting */,
 				D18FE65028F9C72F00C5A572 /* HowItWorks */,
+				F39DE0C429077A7E00225F49 /* ImagePicker.swift */,
 			);
 			path = StartPage;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				B2C4E8472858107F00731F12 /* golden3App.swift in Sources */,
 				B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */,
 				D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */,
+				F39DE0C529077A7E00225F49 /* ImagePicker.swift in Sources */,
 				B2C4E8682858199B00731F12 /* ProfileView.swift in Sources */,
 				D18FE65228F9C75700C5A572 /* HowItWorksView.swift in Sources */,
 				F315675328FDF875005AF020 /* ViewControl.swift in Sources */,
