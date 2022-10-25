@@ -27,23 +27,44 @@ struct MainTabView: View {
 //                         .resizable()
 //                         .ignoresSafeArea()
 //                          .frame(width: 50, height: 50)
-                                
-                                
+                            Text("Home")
+                                .font(Font.custom("FredokaOne-Regular", size: 60))
+                                .padding(.trailing, 60)
+                                .foregroundColor(.white)
+
+
                     }
                     
                         .tag(0)
                    
                     
-                        
+                    SearchView()
+                        .onTapGesture {
+                            self.selectIndex = 1
+                        }.tabItem{
+                            Image("searchlogo")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                            Text("Search")
+                                .font(Font.custom("FredokaOne-Regular", size: 60))
+                                .padding(.trailing, 60)
+                                .foregroundColor(.white)
+                            
+                        }
+                            
                     ActualProfileView()
                         .onTapGesture {
                             self.selectIndex = 2
                         }
                         .tabItem{
-                       Image("searchlogo")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                                
+//                       Image("searchlogo")
+//                        .resizable()
+//                        .frame(width: 100, height: 100)
+                            
+                            Text("Profile")
+                                .font(Font.custom("FredokaOne-Regular", size: 60))
+                                .padding(.trailing, 60)
+                                .foregroundColor(.white)
                     }
                         .tag(2)
                         .background(Color.gray)

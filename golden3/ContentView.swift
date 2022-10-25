@@ -11,6 +11,15 @@ import SwiftUI
 
 // this is a test try it
 struct ContentView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewModel: AuthViewModel
+    
+    @State private var showImagePicker = false
+    @State private var selectedImage: UIImage?
+    @State private var profileImage: Image?
+    
+    
     var body: some View {
         NavigationView{
             
@@ -40,16 +49,36 @@ struct ContentView: View {
                 } label: {
                     // Profile image will take the place of Circle
                     // This will display the users profile image
-                    Circle()
-                        .fill(.gray)
-                        .frame(width:50, height:50)
-                        .padding(.top, 55)
+                    if let profileImage = profileImage {
+                        profileImage
+                    } else {
+                        Circle()
+                            .fill(.gray)
+                            .frame(width:50, height:50)
+                            .padding(.top, 55)
+                    }
+                        
+//                    Circle()
+//                        .fill(.gray)
+//                        .frame(width:50, height:50)
+//                        .padding(.top, 55)
+                    
                     // username will be the users unique username
-                    Text("username")
+//                    Text("username")
+//                        .font(Font.custom("FredokaOne-Regular", size: 18))
+//                        .foregroundColor(.black)
+//                        .padding(.top, 85)
+                    
+                    Text(mainInstance.name)
                         .font(Font.custom("FredokaOne-Regular", size: 18))
                         .foregroundColor(.black)
                         .padding(.top, 85)
                 }
+                .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+                    ImagePicker(selectedImage: $selectedImage )
+                    
+                }
+                
             
             
             }
@@ -57,6 +86,10 @@ struct ContentView: View {
         }
         }
         }
+    }
+    func loadImage() {
+        guard let selectedImage = selectedImage else {return}
+        profileImage = Image(uiImage: selectedImage)
     }
         
 }

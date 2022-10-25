@@ -19,7 +19,7 @@ struct FeedView: View {
                         PostRowView()
                     }
                 }
-            }.background(.orange)
+            }//.background(.orange)
             
             Button{
                 print("Camera button")
