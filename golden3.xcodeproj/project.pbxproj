@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		72F1BEED5C9D4CBA8397F26F /* Pods_golden3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C939B55FC512A2B1B9871FB1 /* Pods_golden3.framework */; };
-		982BF4CE29031AC900141B2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982BF4CD29031AC900141B2C /* GoogleService-Info.plist */; };
 		982BF4D029059C5500141B2C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4CF29059C5500141B2C /* Post.swift */; };
 		982BF4D22905A47300141B2C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4D12905A47300141B2C /* StorageManager.swift */; };
 		982BF4D72906E70E00141B2C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4D62906E70E00141B2C /* CameraView.swift */; };
+		982BF4DB29083D6D00141B2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982BF4DA29083D6D00141B2C /* GoogleService-Info.plist */; };
+		982BF4DD291B06C100141B2C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4DC291B06C100141B2C /* UserService.swift */; };
 		B20D939C28C68C20009D7DE6 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20D939B28C68C20009D7DE6 /* LoginInput.swift */; };
 		B23F511228590E360080FE33 /* ActualProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F511128590E360080FE33 /* ActualProfileView.swift */; };
 		B2C4E8472858107F00731F12 /* golden3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4E8462858107F00731F12 /* golden3App.swift */; };
@@ -44,10 +45,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		982BF4CD29031AC900141B2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		982BF4CF29059C5500141B2C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		982BF4D12905A47300141B2C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageManager.swift; path = golden3/Core/Components/Posts/StorageManager.swift; sourceTree = SOURCE_ROOT; };
 		982BF4D62906E70E00141B2C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		982BF4DA29083D6D00141B2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		982BF4DC291B06C100141B2C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = golden3/UserService.swift; sourceTree = SOURCE_ROOT; };
 		B20D939B28C68C20009D7DE6 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		B23F511128590E360080FE33 /* ActualProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProfileView.swift; sourceTree = "<group>"; };
 		B2C4E8432858107F00731F12 /* golden3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golden3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +148,7 @@
 			children = (
 				B2C4E8462858107F00731F12 /* golden3App.swift */,
 				F315675028FDF82E005AF020 /* ViewRouter.swift */,
-				982BF4CD29031AC900141B2C /* GoogleService-Info.plist */,
+				982BF4DA29083D6D00141B2C /* GoogleService-Info.plist */,
 				D1D3688A28F8D2F600BF016F /* InfoInfo.plist */,
 				B2C4E857285810F400731F12 /* Extensions */,
 				B2C4E856285810F200731F12 /* Model */,
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				982BF4D12905A47300141B2C /* StorageManager.swift */,
+				982BF4DC291B06C100141B2C /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -450,7 +453,7 @@
 				D102E7CF28F7A74B0051EB1F /* please.riv in Resources */,
 				B2C4E84B2858108000731F12 /* Assets.xcassets in Resources */,
 				D162182E28F8D0F000EAED92 /* FredokaOne-Regular.ttf in Resources */,
-				982BF4CE29031AC900141B2C /* GoogleService-Info.plist in Resources */,
+				982BF4DB29083D6D00141B2C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +508,7 @@
 			files = (
 				D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */,
 				B2C4E8642858131900731F12 /* PostRowView.swift in Sources */,
+				982BF4DD291B06C100141B2C /* UserService.swift in Sources */,
 				B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */,
 				B2C4E8492858107F00731F12 /* ContentView.swift in Sources */,
 				F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */,
@@ -662,7 +666,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = golden3/InfoInfo.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "\"Golden\" Would Like to Access the Camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -674,7 +679,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthewlaws;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathaneverette.FirestoreDemo;
 				PRODUCT_NAME = golden3;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -695,7 +700,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = golden3/InfoInfo.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "\"Golden\" Would Like to Access the Camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -707,7 +713,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.matthewlaws;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nathaneverette.FirestoreDemo;
 				PRODUCT_NAME = golden3;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -10,8 +10,15 @@ import Firebase
 
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
+    private let service = UserService()
     
     init() {
         self.userSession = Auth.auth().currentUser
+        self.fetchUser()
+    }
+    func fetchUser(){
+        guard let uid = self.userSession?.uid else {return}
+        service.fetchUser(withUId: uid)
+        
     }
 }

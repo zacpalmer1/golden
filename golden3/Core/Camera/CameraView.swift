@@ -20,7 +20,7 @@ struct CameraView: View {
                 if camera.isCameraTaken{
                     HStack {
                         Spacer()
-                        Button(action: {}, label: {
+                        Button(action: camera.reTake, label: {
                             Image(systemName: "arrow.triangle.2.circlepath.camera").foregroundColor(.black)
                                 .padding()
                                 .background(Color.white)
@@ -35,8 +35,8 @@ struct CameraView: View {
                     if camera.isCameraTaken{
                         // Save button
                         // TODO: Instead of a save button, have it automatically upload to database and post.
-                        Button(action: {}, label: {
-                            Text("Save")
+                        Button(action: {if !camera.isSaved{camera.savePicture()}}, label: {
+                            Text(camera.isSaved ? "Saved" : "Save")
                                 .foregroundColor(.black)
                                 .fontWeight(.semibold)
                                 .padding(.vertical, 10)
@@ -85,6 +85,8 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     @Published var output = AVCapturePhotoOutput()
     @Published var preview : AVCaptureVideoPreviewLayer!
     @Published var currentCamera: AVCaptureDevice?
+    @Published var isSaved = false
+    @Published var pictureData = Data(count: 0)
     func checkCameraAuthorization(){
         // Checks if camera has permissions.
         // TODO: See if specific user gave permissions (?)
@@ -133,7 +135,6 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     }
     
     func takePicture(){
-        // TODO: Take photo.
         DispatchQueue.global(qos: .background).async {
             self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
             self.session.stopRunning()
@@ -143,9 +144,16 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
             }
         }
     }
-    
+    //TODO: Retake Photo
     func reTake(){
-        
+        DispatchQueue.global(qos: .background).async {
+            self.session.startRunning()
+            
+            DispatchQueue.main.async {
+                withAnimation{self.isCameraTaken.toggle()}
+                self.isSaved = false
+            }
+        }
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
@@ -154,6 +162,19 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
         }
         print("Picture taken")
         
+        guard let imageData = photo.fileDataRepresentation() else{return}
+        
+        self.pictureData = imageData
+    }
+    
+    func savePicture(){
+        let image = UIImage(data: self.pictureData)!
+        
+        //UIImageWriteToSavedPhotosAlbum(<#T##image: UIImage##UIImage#>, <#T##completionTarget: Any?##Any?#>, <#T##completionSelector: Selector?##Selector?#>, <#T##contextInfo: UnsafeMutableRawPointer?##UnsafeMutableRawPointer?#>)
+        
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        self.isSaved = true
+        print("Photo saved")
     }
 }
 
