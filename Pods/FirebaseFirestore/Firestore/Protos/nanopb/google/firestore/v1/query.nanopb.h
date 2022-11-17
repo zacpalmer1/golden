@@ -21,8 +21,6 @@
 #define PB_GOOGLE_FIRESTORE_V1_QUERY_NANOPB_H_INCLUDED
 #include <pb.h>
 
-#include "google/api/annotations.nanopb.h"
-
 #include "google/firestore/v1/document.nanopb.h"
 
 #include "google/protobuf/wrappers.nanopb.h"
@@ -50,11 +48,12 @@ typedef enum _google_firestore_v1_StructuredQuery_Direction {
 
 typedef enum _google_firestore_v1_StructuredQuery_CompositeFilter_Operator {
     google_firestore_v1_StructuredQuery_CompositeFilter_Operator_OPERATOR_UNSPECIFIED = 0,
-    google_firestore_v1_StructuredQuery_CompositeFilter_Operator_AND = 1
+    google_firestore_v1_StructuredQuery_CompositeFilter_Operator_AND = 1,
+    google_firestore_v1_StructuredQuery_CompositeFilter_Operator_OR = 2
 } google_firestore_v1_StructuredQuery_CompositeFilter_Operator;
 #define _google_firestore_v1_StructuredQuery_CompositeFilter_Operator_MIN google_firestore_v1_StructuredQuery_CompositeFilter_Operator_OPERATOR_UNSPECIFIED
-#define _google_firestore_v1_StructuredQuery_CompositeFilter_Operator_MAX google_firestore_v1_StructuredQuery_CompositeFilter_Operator_AND
-#define _google_firestore_v1_StructuredQuery_CompositeFilter_Operator_ARRAYSIZE ((google_firestore_v1_StructuredQuery_CompositeFilter_Operator)(google_firestore_v1_StructuredQuery_CompositeFilter_Operator_AND+1))
+#define _google_firestore_v1_StructuredQuery_CompositeFilter_Operator_MAX google_firestore_v1_StructuredQuery_CompositeFilter_Operator_OR
+#define _google_firestore_v1_StructuredQuery_CompositeFilter_Operator_ARRAYSIZE ((google_firestore_v1_StructuredQuery_CompositeFilter_Operator)(google_firestore_v1_StructuredQuery_CompositeFilter_Operator_OR+1))
 
 typedef enum _google_firestore_v1_StructuredQuery_FieldFilter_Operator {
     google_firestore_v1_StructuredQuery_FieldFilter_Operator_OPERATOR_UNSPECIFIED = 0,

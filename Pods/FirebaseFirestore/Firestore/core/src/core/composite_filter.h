@@ -80,6 +80,13 @@ class CompositeFilter : public Filter {
     return composite_filter_rep().IsFlat();
   }
 
+  /**
+   * Returns a new composite filter that contains all filter from `this`
+   * plus all the given filters.
+   */
+  CompositeFilter WithAddedFilters(
+      const std::vector<core::Filter>& other_filters);
+
  private:
   class Rep : public Filter::Rep {
    private:
@@ -130,6 +137,10 @@ class CompositeFilter : public Filter {
     const std::vector<FieldFilter>& GetFlattenedFilters() const override;
 
     const model::FieldPath* GetFirstInequalityField() const override;
+
+    std::vector<Filter> GetFilters() const override {
+      return filters();
+    }
 
     /**
      * Performs a depth-first search to find and return the first FieldFilter in
