@@ -12,6 +12,7 @@ import Firebase
 struct golden3App: App {
     //@Published var userSession: FirebaseAuth.User?
     @StateObject var viewRouter = ViewRouter()
+    @StateObject var viewModel = AuthViewModel()
     
     init(){
         FirebaseApp.configure()
@@ -21,14 +22,9 @@ struct golden3App: App {
         let _ = print("APP_DEBUG: Application running.")
         WindowGroup {
             
-            ViewControl().environmentObject(viewRouter)
-            
-            
-            
-            //Feel free to delete below, showing before and after navigation syntax
-            
-            //GreetingView()
-            
+            ViewControl()
+                .environmentObject(viewRouter)
+                .environmentObject(viewModel)
         }
     }
 }

@@ -30,7 +30,11 @@ struct ViewControl: View {
             ContentView()
         case .cameraPage:
             CameraView()
-            
+    
+        case .actualLoginPage:
+            ActualLoginView()
+        case .actualRegistrationPage:
+            ActualRegistrationView()
             
             
     // add new page format:

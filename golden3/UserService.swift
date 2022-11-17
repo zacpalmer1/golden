@@ -9,9 +9,11 @@ import Firebase
 
 struct UserService{
     func fetchUser(withUId uid: String){
-        Firestore.firestore().collection("users").document(uid).getDocument{snapshot,_ in
-            guard let data = snapshot?.data() else {return}
-            print("Debug: User Data Is: \(data)")
-        }
+        Firestore.firestore().collection("users")
+            .document(uid)
+            .getDocument{snapshot, _ in
+                guard let data = snapshot?.data() else {return}
+                print("Debug: Fetched - User Data Is: \(data)")
+            }
     }
 }

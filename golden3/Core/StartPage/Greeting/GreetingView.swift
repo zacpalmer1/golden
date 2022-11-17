@@ -34,7 +34,8 @@ struct GreetingView: View {
                     
                     // Login button linked to Login Page
                     NavigationLink{
-                        SignupView()
+                        //SignupView()
+                        ActualLoginView()
                         // hides the backspace when changing pages
                             .navigationBarHidden(true)
                     }
@@ -55,7 +56,8 @@ struct GreetingView: View {
                     
                     //Sign up button linked to Signin Page
                     NavigationLink{
-                        LoginView()
+                        //LoginView()
+                        ActualRegistrationView()
                         // hides the backspace when changing pages
                             .navigationBarHidden(true)
                     }

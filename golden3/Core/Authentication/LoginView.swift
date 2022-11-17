@@ -11,13 +11,15 @@ import Firebase
 struct LoginView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
-//    @EnvironmentObject var authViewModel: AuthViewModel
-//    @Published var userSession: FirebaseAuth.User?
+    @EnvironmentObject var authViewModel: AuthViewModel
+    // @Published var userSession: FirebaseAuth.User?
 //
-//    //@ObservableObject var userSession: AuthViewModel
+    //@ObservableObject var userSession: AuthViewModel
 //    init() {
 //        self.userSession = Auth.auth().currentUser
 //    }
+    
+    //print(authViewModel.userSession)
 
 
     @State var username = ""
@@ -176,6 +178,7 @@ struct LoginView: View {
                 return
             }
             
+            
 //            guard let user = authResult?.user else { return }
 //            self.userSession = user
             
@@ -193,7 +196,7 @@ struct LoginView: View {
                 viewRouter.currentPage = .howItWorksPage
             }
             
-            mainInstance.name = username
+            //mainInstance.name = username
         }
         
     }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewModel: AuthViewModel
     //private let database = Database.database().reference()
     var body: some View {
         
@@ -27,12 +28,12 @@ struct ProfileView: View {
                         .clipped()
                         .padding(.top)
                     
-                    Text(mainInstance.name).font(Font.custom("FredokaOne-Regular", size: 25)).padding(.top, 8).foregroundColor(.black)
-                    
-                    Text(mainInstance.name)
-                        .font(Font.custom("FredokaOne-Regular", size: 18))
-                        .foregroundColor(.black)
-                        .padding(.top, 85)
+//                    Text(mainInstance.name).font(Font.custom("FredokaOne-Regular", size: 25)).padding(.top, 8).foregroundColor(.black)
+//                    
+//                    Text(mainInstance.name)
+//                        .font(Font.custom("FredokaOne-Regular", size: 18))
+//                        .foregroundColor(.black)
+//                        .padding(.top, 85)
         
                 }
                 Spacer()
@@ -44,6 +45,15 @@ struct ProfileView: View {
                         .foregroundColor(.black)
                         .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
                 }
+            }
+            Spacer()
+            Button{
+                viewModel.signOut()
+            } label: {
+                Text("Sign Out").font(.subheadline).bold()
+                    .frame(width: 120, height: 32)
+                    .foregroundColor(.black)
+                    .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
             }
             Spacer()
             
