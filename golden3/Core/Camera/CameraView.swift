@@ -12,7 +12,31 @@ struct CameraView: View {
     @StateObject var camera = Camera()
     @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
+//        Button{
+//            withAnimation(){
+//                viewRouter.currentPage = .contentPage
+//
+//            }
+//
+//        } label: {
+//            Image("back")
+//                 .resizable()
+//                 .frame(width:20, height:20)
+//                 .padding(.trailing, 300)
+//        }
         ZStack{
+//            Button{
+//                withAnimation(){
+//                    viewRouter.currentPage = .contentPage
+//
+//                }
+//
+//            } label: {
+//                Image("back")
+//                     .resizable()
+//                     .frame(width:20, height:20)
+//                     .padding(.trailing, 300)
+//            }
             CameraPreview(camera: camera)
                 .ignoresSafeArea()
             

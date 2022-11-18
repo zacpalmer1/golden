@@ -40,6 +40,7 @@ enum Page {
     
     case actualLoginPage
     case actualRegistrationPage
+    case searchPage
     
     // add new page format:
     // case feedPage

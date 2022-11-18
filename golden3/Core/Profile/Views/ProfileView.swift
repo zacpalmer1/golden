@@ -11,6 +11,11 @@ import Kingfisher
 struct ProfileView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var authViewModel: AuthViewModel
+    // private let user: User
+    
+//    init(user: User) {
+//        self.user = user
+//    }
 
     var body: some View {
         

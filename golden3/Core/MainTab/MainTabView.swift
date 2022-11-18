@@ -37,29 +37,54 @@ struct MainTabView: View {
                     
                         .tag(0)
                    
-                    
-                    SearchView()
+                    CameraView()
                         .onTapGesture {
                             self.selectIndex = 1
-                        }.tabItem{
-                            Image("searchlogo")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                            Text("Search")
+                        }
+                        .tabItem{
+                            Text("Camera")
                                 .font(Font.custom("FredokaOne-Regular", size: 60))
                                 .padding(.trailing, 60)
                                 .foregroundColor(.white)
-                            
                         }
+                    
+//                    Button{
+//                        print("Camera button")
+//                        viewRouter.currentPage = .cameraPage
+//
+//                    } label: {
+//                        Image(systemName: "camera.fill")
+//                            .resizable()
+//                            .renderingMode(.template)
+//                            .frame(width: 28, height: 28)
+//                            .padding()
+//                    }
+//                    .background(Color.black)
+//                    .foregroundColor(.white)
+//                    .clipShape(Circle())
+//                    .padding()
+//                    .fullScreenCover(isPresented: $showNewPostView){
+//                        Text("New Post View")
+//                    }
+//                    SearchView()
+//                        .onTapGesture {
+//                            self.selectIndex = 1
+//                        }.tabItem{
+//                            Image("searchlogo")
+//                                .resizable()
+//                                .frame(width: 100, height: 100)
+//                            Text("Search")
+//                                .font(Font.custom("FredokaOne-Regular", size: 60))
+//                                .padding(.trailing, 60)
+//                                .foregroundColor(.white)
+//
+//                        }
                             
                     ActualProfileView()
                         .onTapGesture {
                             self.selectIndex = 2
                         }
                         .tabItem{
-//                       Image("searchlogo")
-//                        .resizable()
-//                        .frame(width: 100, height: 100)
                             
                             Text("Profile")
                                 .font(Font.custom("FredokaOne-Regular", size: 60))

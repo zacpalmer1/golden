@@ -37,6 +37,8 @@ struct ViewControl: View {
             ActualRegistrationView()
         case .profilePage:
             ActualProfileView()
+        case .searchPage:
+            SearchView()
             
             
     // add new page format:

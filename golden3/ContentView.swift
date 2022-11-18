@@ -51,54 +51,65 @@ extension ContentView {
             
             .toolbar{
                 ToolbarItem(placement: .principal) {
-                    Image("goldenlogo")
-                         .resizable()
-                         .frame(width:130, height:45)
-                         .padding(.trailing, 125)
+                    Button{
+                        withAnimation(.easeIn){
+                            viewRouter.currentPage = .howItWorksPage
+
+                        }
+                        //viewRouter.currentPage = .howItWorksPage
+                    } label: {
+                        Image("goldenlogo")
+                             .resizable()
+                             .frame(width:130, height:45)
+                             //.padding(.trailing, 50)
+                    }
+//                    Image("goldenlogo")
+//                         .resizable()
+//                         .frame(width:130, height:45)
+//                         .padding(.trailing, 125)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button{
-                        
+                        viewRouter.currentPage = .searchPage
                     } label: {
-                        Image("more")
+                        Image("magnifylogo")
                             .resizable()
-                            .frame(width:20, height:20)
+                            .frame(width: 35, height: 35)
+                            .foregroundColor(.white)
+//                        Text("Search")
+//                            .font(Font.custom("FredokaOne-Regular", size: 60))
+//                            .padding(.trailing, 60)
+//                            .foregroundColor(.white)
+//                        Image("more")
+//                            .resizable()
+//                            .frame(width:20, height:20)
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     if let user = authViewModel.currentUser {
-                        Button{
-                            viewRouter.currentPage = .profilePage
-                            
-                        } label: {
+//                        Button{
+//                            //viewRouter.currentPage = .profilePage
+//
+//                        } label: {
                             KFImage(URL(string: user.profileImageUrl))
+                                
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 50, height: 50)
                                 //.padding(.top, 85)
                                 .clipShape(Circle())
-                            // Profile image will take the place of Circle
-                            // This will display the users profile image
-//                            if let profileImage = profileImage {
-//                                profileImage
-//                            } else {
-//                                Circle()
-//                                    .fill(.gray)
-//                                    .frame(width:50, height:50)
-//                                    .padding(.top, 55)
-//                            }
-                                
+                        // username will be the users unique username
+                            Text("@\(user.username)")
+                                .font(Font.custom("FredokaOne-Regular", size: 18))
+                                .foregroundColor(.black)
+                                .padding(.top, 85)
+                       
                             
-                            // username will be the users unique username
-    //                        Text("@\(user.username)")
-    //                            .font(Font.custom("FredokaOne-Regular", size: 18))
-    //                            .foregroundColor(.black)
-    //                            .padding(.top, 85)
+                            
 
-                        }
+                        //}
+                        
                     }
-//                    .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
-//                        ImagePicker(selectedImage: $selectedImage )
                         
                     }
                     
