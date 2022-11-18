@@ -36,6 +36,7 @@ enum Page {
     case howItWorksPage
     case contentPage
     case cameraPage
+    case profilePage
     
     case actualLoginPage
     case actualRegistrationPage

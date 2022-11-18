@@ -10,6 +10,8 @@ import Firebase
 
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: User?
+    
     private var tempUserSession: FirebaseAuth.User?
     
     private let service = UserService()
@@ -19,8 +21,6 @@ class AuthViewModel: ObservableObject{
         self.fetchUser()
         
         //print("DEBUG: User session is \(self.userSession?.uid)")
-        
-        //self.fetchUser()
     }
     
     // Login function
@@ -100,6 +100,8 @@ class AuthViewModel: ObservableObject{
     
     func fetchUser(){
         guard let uid = self.userSession?.uid else {return}
-        service.fetchUser(withUId: uid)
+        service.fetchUser(withUId: uid) { User in
+            self.currentUser = User
+        }
     }
 }

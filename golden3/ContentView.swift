@@ -8,12 +8,13 @@
 // testestest
 
 import SwiftUI
+import Kingfisher
 
 
 struct ContentView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     @State private var showImagePicker = false
     @State private var selectedImage: UIImage?
@@ -23,7 +24,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             // no user logged in
-            if viewModel.userSession == nil {
+            if authViewModel.userSession == nil {
                 GreetingView()
             } else {
                 // have a logged in user
@@ -41,6 +42,7 @@ struct ContentView: View {
 extension ContentView {
     var mainInterfaceView: some View {
         
+            
             NavigationView{
                 
             ZStack (alignment: .leading){
@@ -64,38 +66,39 @@ extension ContentView {
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button{
-                        
-                    } label: {
-                        // Profile image will take the place of Circle
-                        // This will display the users profile image
-                        if let profileImage = profileImage {
-                            profileImage
-                        } else {
-                            Circle()
-                                .fill(.gray)
-                                .frame(width:50, height:50)
-                                .padding(.top, 55)
-                        }
+                    if let user = authViewModel.currentUser {
+                        Button{
+                            viewRouter.currentPage = .profilePage
                             
-    //                    Circle()
-    //                        .fill(.gray)
-    //                        .frame(width:50, height:50)
-    //                        .padding(.top, 55)
-                        
-                        // username will be the users unique username
-    //                    Text("username")
-    //                        .font(Font.custom("FredokaOne-Regular", size: 18))
-    //                        .foregroundColor(.black)
-    //                        .padding(.top, 85)
-                        
-//                        Text(mainInstance.name)
-//                            .font(Font.custom("FredokaOne-Regular", size: 18))
-//                            .foregroundColor(.black)
-//                            .padding(.top, 85)
+                        } label: {
+                            KFImage(URL(string: user.profileImageUrl))
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50)
+                                //.padding(.top, 85)
+                                .clipShape(Circle())
+                            // Profile image will take the place of Circle
+                            // This will display the users profile image
+//                            if let profileImage = profileImage {
+//                                profileImage
+//                            } else {
+//                                Circle()
+//                                    .fill(.gray)
+//                                    .frame(width:50, height:50)
+//                                    .padding(.top, 55)
+//                            }
+                                
+                            
+                            // username will be the users unique username
+    //                        Text("@\(user.username)")
+    //                            .font(Font.custom("FredokaOne-Regular", size: 18))
+    //                            .foregroundColor(.black)
+    //                            .padding(.top, 85)
+
+                        }
                     }
-                    .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
-                        ImagePicker(selectedImage: $selectedImage )
+//                    .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+//                        ImagePicker(selectedImage: $selectedImage )
                         
                     }
                     
@@ -105,7 +108,8 @@ extension ContentView {
                 
             }
             }
-            }
+            
+        
     }
 }
 

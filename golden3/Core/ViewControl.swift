@@ -35,6 +35,8 @@ struct ViewControl: View {
             ActualLoginView()
         case .actualRegistrationPage:
             ActualRegistrationView()
+        case .profilePage:
+            ActualProfileView()
             
             
     // add new page format:

@@ -32,14 +32,16 @@
 		D18FE65B28F9EE1400C5A572 /* loopbackground.riv in Resources */ = {isa = PBXBuildFile; fileRef = D18FE65A28F9EE1400C5A572 /* loopbackground.riv */; };
 		D18FE65E28F9EFDB00C5A572 /* BackgroundAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18FE65D28F9EFDB00C5A572 /* BackgroundAnimated.swift */; };
 		D18FE66A28FA5AF900C5A572 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D18FE66928FA5AF900C5A572 /* RiveRuntime */; };
-		D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3688F28F8DFA900BF016F /* LoginView.swift */; };
+		D1D3689028F8DFA900BF016F /* DONTUSELOGIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3688F28F8DFA900BF016F /* DONTUSELOGIN.swift */; };
 		D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689528F8E5A900BF016F /* SignupInput.swift */; };
-		D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689728F8E6AC00BF016F /* SignupView.swift */; };
+		D1D3689828F8E6AC00BF016F /* DONTUSESIGNIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3689728F8E6AC00BF016F /* DONTUSESIGNIN.swift */; };
 		F315675128FDF82E005AF020 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675028FDF82E005AF020 /* ViewRouter.swift */; };
 		F315675328FDF875005AF020 /* ViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F315675228FDF875005AF020 /* ViewControl.swift */; };
 		F37A2B202925633C00ACEDBA /* ActualLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37A2B1F2925633C00ACEDBA /* ActualLoginView.swift */; };
 		F37A2B222925635200ACEDBA /* ActualRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37A2B212925635200ACEDBA /* ActualRegistrationView.swift */; };
 		F37A2B25292587A500ACEDBA /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37A2B24292587A500ACEDBA /* ImageUploader.swift */; };
+		F395605C29280BF100A1865F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F395605B29280BF100A1865F /* User.swift */; };
+		F395605F292813AD00A1865F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F395605E292813AD00A1865F /* Kingfisher */; };
 		F39DE0BB29074FBE00225F49 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BA29074FBE00225F49 /* AuthViewModel.swift */; };
 		F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BE29075C0900225F49 /* SearchView.swift */; };
 		F39DE0C129075C1C00225F49 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C029075C1C00225F49 /* SampleData.swift */; };
@@ -74,15 +76,16 @@
 		D18FE65A28F9EE1400C5A572 /* loopbackground.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = loopbackground.riv; sourceTree = "<group>"; };
 		D18FE65D28F9EFDB00C5A572 /* BackgroundAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimated.swift; sourceTree = "<group>"; };
 		D1D3688A28F8D2F600BF016F /* InfoInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoInfo.plist; sourceTree = "<group>"; };
-		D1D3688F28F8DFA900BF016F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D1D3688F28F8DFA900BF016F /* DONTUSELOGIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DONTUSELOGIN.swift; sourceTree = "<group>"; };
 		D1D3689528F8E5A900BF016F /* SignupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInput.swift; sourceTree = "<group>"; };
-		D1D3689728F8E6AC00BF016F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		D1D3689728F8E6AC00BF016F /* DONTUSESIGNIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DONTUSESIGNIN.swift; sourceTree = "<group>"; };
 		DCE1CDCBFE99EB5960EE83CA /* Pods_golden3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golden3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F315675028FDF82E005AF020 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		F315675228FDF875005AF020 /* ViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControl.swift; sourceTree = "<group>"; };
 		F37A2B1F2925633C00ACEDBA /* ActualLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoginView.swift; sourceTree = "<group>"; };
 		F37A2B212925635200ACEDBA /* ActualRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualRegistrationView.swift; sourceTree = "<group>"; };
 		F37A2B24292587A500ACEDBA /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		F395605B29280BF100A1865F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F39DE0BA29074FBE00225F49 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		F39DE0BE29075C0900225F49 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = golden3/SearchView.swift; sourceTree = SOURCE_ROOT; };
 		F39DE0C029075C1C00225F49 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = golden3/SampleData.swift; sourceTree = SOURCE_ROOT; };
@@ -94,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F395605F292813AD00A1865F /* Kingfisher in Frameworks */,
 				D18FE66A28FA5AF900C5A572 /* RiveRuntime in Frameworks */,
 				86CE46EE158EAC6108B819D4 /* Pods_golden3.framework in Frameworks */,
 			);
@@ -157,13 +161,13 @@
 		B2C4E8452858107F00731F12 /* golden3 */ = {
 			isa = PBXGroup;
 			children = (
+				F395605A29280BE500A1865F /* Model */,
 				F37A2B26292592D500ACEDBA /* Utility */,
 				B2C4E8462858107F00731F12 /* golden3App.swift */,
 				F315675028FDF82E005AF020 /* ViewRouter.swift */,
 				982BF4DA29083D6D00141B2C /* GoogleService-Info.plist */,
 				D1D3688A28F8D2F600BF016F /* InfoInfo.plist */,
 				B2C4E857285810F400731F12 /* Extensions */,
-				B2C4E856285810F200731F12 /* Model */,
 				B2C4E855285810F100731F12 /* Service */,
 				B2C4E854285810EF00731F12 /* Core */,
 				B247FE9328F71F0A002EFFA3 /* Rive */,
@@ -209,13 +213,6 @@
 				F37A2B24292587A500ACEDBA /* ImageUploader.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		B2C4E856285810F200731F12 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B2C4E857285810F400731F12 /* Extensions */ = {
@@ -381,8 +378,8 @@
 			children = (
 				F37A2B1C292562ED00ACEDBA /* Views */,
 				F37A2B1B292562E200ACEDBA /* ViewModel */,
-				D1D3688F28F8DFA900BF016F /* LoginView.swift */,
-				D1D3689728F8E6AC00BF016F /* SignupView.swift */,
+				D1D3688F28F8DFA900BF016F /* DONTUSELOGIN.swift */,
+				D1D3689728F8E6AC00BF016F /* DONTUSESIGNIN.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -412,6 +409,14 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		F395605A29280BE500A1865F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F395605B29280BF100A1865F /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -432,6 +437,7 @@
 			name = golden3;
 			packageProductDependencies = (
 				D18FE66928FA5AF900C5A572 /* RiveRuntime */,
+				F395605E292813AD00A1865F /* Kingfisher */,
 			);
 			productName = golden3;
 			productReference = B2C4E8432858107F00731F12 /* golden3.app */;
@@ -462,7 +468,8 @@
 			);
 			mainGroup = B2C4E83A2858107F00731F12;
 			packageReferences = (
-				D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */,
+				D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */,
+				F395605D292813AD00A1865F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B2C4E8442858107F00731F12 /* Products */;
 			projectDirPath = "";
@@ -536,7 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1D3689828F8E6AC00BF016F /* SignupView.swift in Sources */,
+				D1D3689828F8E6AC00BF016F /* DONTUSESIGNIN.swift in Sources */,
 				B2C4E8642858131900731F12 /* PostRowView.swift in Sources */,
 				982BF4DD291B06C100141B2C /* UserService.swift in Sources */,
 				B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */,
@@ -544,10 +551,11 @@
 				F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */,
 				B2C4E85F2858119A00731F12 /* FeedView.swift in Sources */,
 				B23F511228590E360080FE33 /* ActualProfileView.swift in Sources */,
+				F395605C29280BF100A1865F /* User.swift in Sources */,
 				D18FE65E28F9EFDB00C5A572 /* BackgroundAnimated.swift in Sources */,
 				982BF4D22905A47300141B2C /* StorageManager.swift in Sources */,
 				F37A2B202925633C00ACEDBA /* ActualLoginView.swift in Sources */,
-				D1D3689028F8DFA900BF016F /* LoginView.swift in Sources */,
+				D1D3689028F8DFA900BF016F /* DONTUSELOGIN.swift in Sources */,
 				B2C4E8472858107F00731F12 /* golden3App.swift in Sources */,
 				B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */,
 				D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */,
@@ -777,7 +785,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */ = {
+		D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios.git";
 			requirement = {
@@ -785,13 +793,26 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		F395605D292813AD00A1865F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		D18FE66928FA5AF900C5A572 /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */;
+			package = D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */;
 			productName = RiveRuntime;
+		};
+		F395605E292813AD00A1865F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F395605D292813AD00A1865F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
