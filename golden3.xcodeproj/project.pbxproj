@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72F1BEED5C9D4CBA8397F26F /* Pods_golden3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C939B55FC512A2B1B9871FB1 /* Pods_golden3.framework */; };
+		86CE46EE158EAC6108B819D4 /* Pods_golden3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE1CDCBFE99EB5960EE83CA /* Pods_golden3.framework */; };
 		982BF4D029059C5500141B2C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4CF29059C5500141B2C /* Post.swift */; };
 		982BF4D22905A47300141B2C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4D12905A47300141B2C /* StorageManager.swift */; };
 		982BF4D72906E70E00141B2C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4D62906E70E00141B2C /* CameraView.swift */; };
@@ -47,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FAE3F83FE408CCB2622C92D /* Pods-golden3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden3.release.xcconfig"; path = "Target Support Files/Pods-golden3/Pods-golden3.release.xcconfig"; sourceTree = "<group>"; };
+		948A74343E8DA429F517B297 /* Pods-golden3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden3.debug.xcconfig"; path = "Target Support Files/Pods-golden3/Pods-golden3.debug.xcconfig"; sourceTree = "<group>"; };
 		982BF4CF29059C5500141B2C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		982BF4D12905A47300141B2C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageManager.swift; path = golden3/Core/Components/Posts/StorageManager.swift; sourceTree = SOURCE_ROOT; };
 		982BF4D62906E70E00141B2C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -65,9 +67,6 @@
 		B2C4E8672858199B00731F12 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B2C4E86A28581A5100731F12 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		B2C4E86C28581B4600731F12 /* ActualFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFeed.swift; sourceTree = "<group>"; };
-		BDD5F99B6851BE4CDBF84543 /* Pods-golden3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden3.release.xcconfig"; path = "Target Support Files/Pods-golden3/Pods-golden3.release.xcconfig"; sourceTree = "<group>"; };
-		BF789F482DD5FC528BF97B8A /* Pods-golden3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golden3.debug.xcconfig"; path = "Target Support Files/Pods-golden3/Pods-golden3.debug.xcconfig"; sourceTree = "<group>"; };
-		C939B55FC512A2B1B9871FB1 /* Pods_golden3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golden3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D102E7CE28F7A74B0051EB1F /* please.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = please.riv; sourceTree = "<group>"; };
 		D162182D28F8D0F000EAED92 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
 		D18FE65128F9C75700C5A572 /* HowItWorksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksView.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		D1D3688F28F8DFA900BF016F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D1D3689528F8E5A900BF016F /* SignupInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInput.swift; sourceTree = "<group>"; };
 		D1D3689728F8E6AC00BF016F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		DCE1CDCBFE99EB5960EE83CA /* Pods_golden3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golden3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F315675028FDF82E005AF020 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		F315675228FDF875005AF020 /* ViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControl.swift; sourceTree = "<group>"; };
 		F37A2B1F2925633C00ACEDBA /* ActualLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoginView.swift; sourceTree = "<group>"; };
@@ -95,13 +95,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18FE66A28FA5AF900C5A572 /* RiveRuntime in Frameworks */,
-				72F1BEED5C9D4CBA8397F26F /* Pods_golden3.framework in Frameworks */,
+				86CE46EE158EAC6108B819D4 /* Pods_golden3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2937C844D89811AB97FBB05A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCE1CDCBFE99EB5960EE83CA /* Pods_golden3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		982BF4D32905ADCD00141B2C /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +142,7 @@
 				B2C4E8452858107F00731F12 /* golden3 */,
 				B2C4E8442858107F00731F12 /* Products */,
 				E4FA887192D594FDA5433307 /* Pods */,
-				E93D84BCD83CA8B18C348473 /* Frameworks */,
+				2937C844D89811AB97FBB05A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -362,18 +370,10 @@
 		E4FA887192D594FDA5433307 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BF789F482DD5FC528BF97B8A /* Pods-golden3.debug.xcconfig */,
-				BDD5F99B6851BE4CDBF84543 /* Pods-golden3.release.xcconfig */,
+				948A74343E8DA429F517B297 /* Pods-golden3.debug.xcconfig */,
+				1FAE3F83FE408CCB2622C92D /* Pods-golden3.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E93D84BCD83CA8B18C348473 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C939B55FC512A2B1B9871FB1 /* Pods_golden3.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F3370AFE28FF5B1B00712AF5 /* Authentication */ = {
@@ -419,11 +419,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2C4E8512858108000731F12 /* Build configuration list for PBXNativeTarget "golden3" */;
 			buildPhases = (
-				EEB40E8A0295D27EE57B4E54 /* [CP] Check Pods Manifest.lock */,
+				04AA488EC44317F099BE19CC /* [CP] Check Pods Manifest.lock */,
 				B2C4E83F2858107F00731F12 /* Sources */,
 				B2C4E8402858107F00731F12 /* Frameworks */,
 				B2C4E8412858107F00731F12 /* Resources */,
-				EA4EBCD8F7CD952D3E1133EF /* [CP] Embed Pods Frameworks */,
+				4202AF793C8DE50794A2ACD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -462,7 +462,7 @@
 			);
 			mainGroup = B2C4E83A2858107F00731F12;
 			packageReferences = (
-				D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */,
+				D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */,
 			);
 			productRefGroup = B2C4E8442858107F00731F12 /* Products */;
 			projectDirPath = "";
@@ -490,24 +490,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EA4EBCD8F7CD952D3E1133EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-golden3/Pods-golden3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-golden3/Pods-golden3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-golden3/Pods-golden3-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EEB40E8A0295D27EE57B4E54 /* [CP] Check Pods Manifest.lock */ = {
+		04AA488EC44317F099BE19CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -527,6 +510,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4202AF793C8DE50794A2ACD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golden3/Pods-golden3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golden3/Pods-golden3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-golden3/Pods-golden3-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -687,7 +687,7 @@
 		};
 		B2C4E8522858108000731F12 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF789F482DD5FC528BF97B8A /* Pods-golden3.debug.xcconfig */;
+			baseConfigurationReference = 948A74343E8DA429F517B297 /* Pods-golden3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -721,7 +721,7 @@
 		};
 		B2C4E8532858108000731F12 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDD5F99B6851BE4CDBF84543 /* Pods-golden3.release.xcconfig */;
+			baseConfigurationReference = 1FAE3F83FE408CCB2622C92D /* Pods-golden3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -777,7 +777,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+		D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios.git";
 			requirement = {
@@ -790,7 +790,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		D18FE66928FA5AF900C5A572 /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			package = D18FE66828FA5AF900C5A572 /* XCRemoteSwiftPackageReference "rive-ios.git" */;
 			productName = RiveRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */
