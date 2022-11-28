@@ -58,6 +58,24 @@ struct ProfileView: View {
                 }
                 Spacer()
                 Button{
+                print("Camera button")
+                viewRouter.currentPage = .cameraPage
+
+            } label: {
+                Image(systemName: "camera.fill")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: 28, height: 28)
+                    .padding()
+            }
+            .background(Color.black)
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .padding()
+            //.fullScreenCover(isPresented: $showNewPostView){
+                Text("New Post View")
+            
+                Button{
                     authViewModel.signOut()
                 } label: {
                     Text("Sign Out").font(.subheadline).bold()
