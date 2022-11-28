@@ -191,7 +191,7 @@ struct LoginView: View {
                 print("authResult: Could not create account.")
                 authProcessing = false
             case .some(_):
-                print("authResult: New Account Created with authResult: \(authResult)")
+//                print("authResult: New Account Created with authResult: \(authResult)")
                 authProcessing = false
                 viewRouter.currentPage = .howItWorksPage
             }
