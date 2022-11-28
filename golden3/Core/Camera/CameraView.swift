@@ -206,6 +206,8 @@ struct CameraPreview: UIViewRepresentable{
     @ObservedObject var camera: Camera
     
     func makeUIView(context: Context) -> UIView {
+        
+        print("DEBUG: CAMERA VIEW")
         let view = UIView(frame: UIScreen.main.bounds)
         camera.preview = AVCaptureVideoPreviewLayer(session: camera.session)
         camera.preview.frame = view.frame
