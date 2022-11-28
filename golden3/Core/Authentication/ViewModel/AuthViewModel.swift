@@ -82,7 +82,7 @@ class AuthViewModel: ObservableObject{
         
         guard let uid = tempUserSession?.uid else { return }
         
-        ImageUploader.uploadImage(image: image) { profileImageUrl in
+        ImageUploader.uploadProfileImageURL(image: image) { profileImageUrl in
             Firestore.firestore().collection("users")
                 .document(uid)
                 .updateData(["profileImageUrl": profileImageUrl]) { error in
