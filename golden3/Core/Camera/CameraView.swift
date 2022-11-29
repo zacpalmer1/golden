@@ -9,8 +9,9 @@ import SwiftUI
 import Firebase
 import AVFoundation
 
-struct CameraView: View {
+struct CameraView: View{
     @EnvironmentObject var authViewModel: AuthViewModel
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var camera = Camera()
     @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
@@ -18,6 +19,8 @@ struct CameraView: View {
         let user = authViewModel.currentUser
         
         if user != nil {
+            
+            
             //        Button{
             //            withAnimation(){
             //                viewRouter.currentPage = .contentPage
@@ -67,11 +70,38 @@ struct CameraView: View {
                                     // TODO: Instead of a save button, have it automatically upload to database and post.
                                     Button(
                                         action:{
+                                            print("DEBUG: user \(user?.username)")
                                             print("DEBUG: BEFORE")
+                                            
                                             // guard let photoTaken = UIImage(data: Camera.pictureData) else {print("DEBUG: phototaken returning"); return }
 //                                            guard let photoTaken = UIImage(camera.photoOutput) else {
 //                                                print("DEBUG: RETURNING")
 //                                                return }
+                                            
+//
+//                                            let image = UIImage(data: camera.pictureData)
+//                                            print("DEBUG: data->uiimage \(image)")
+//                                            // let user = authViewModel.currentUser //--
+//
+//                                            if let user = authViewModel.currentUser {
+//                                                //guard let username = user.username else { print("DEBUG: username returning"); return }
+//                                                let username = user.username
+//
+//                                                ImageUploader.uploadPostImageUrl( image: image!) { postImageUrl in
+//                                                    Firestore.firestore().collection("posts")
+//                                                        .document(username)
+//                                                        .setData(["postImageUrl": postImageUrl ]) { error in
+//                                                            if let error = error {
+//                                                                print("\(error.localizedDescription)")
+//                                                                return
+//                                                            }
+//
+//                                                        }
+//
+//                                                    //self.isSaved = true
+//
+//                                                }
+                                            //}
                                             
                                             camera.uploadPost()
                                             print("DEBUG: AFTER")
@@ -207,11 +237,13 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if error != nil{
+            print("DEBUG: \(error)");
             return
         }
-        print("Picture taken")
         
-        guard let imageData = photo.fileDataRepresentation() else{return}
+        print("DEBUG: Picture taken")
+        
+        guard let imageData = photo.fileDataRepresentation() else { return }
         
         self.pictureData = imageData
         print("DEBUG: IMAGE DATA: \(self.pictureData)")
@@ -227,34 +259,37 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
         self.isSaved = true
         print("Photo saved")
     }
-    
+
     func uploadPost(){
-        //@EnvironmentObject var authViewModel: AuthViewModel
-        
+        // @EnvironmentObject var authViewModel: AuthViewModel
+        if let user = authViewModel.currentUser {
+            print("DEBUG: upload func user \(user.username)")
+        }
         print("DEBUG: upload post function")
-        
+
         let image = UIImage(data: self.pictureData)!
-        let user = authViewModel.currentUser //--
-        
-        //if let user = authViewModel.currentUser {
-        guard let username = user?.username else { print("DEBUG: username returning"); return }
-            //let username = user?.username
-            
-        ImageUploader.uploadPostImageUrl( image: image) { postImageUrl in
-                Firestore.firestore().collection("posts")
-                    .document(username)
-                    .setData(["postImageUrl": postImageUrl ]) { error in
-                        if let error = error {
-                            print("\(error.localizedDescription)")
-                            return
+        print("DEBUG: data->uiimage \(image)")
+        // let user = authViewModel.currentUser //--
+
+        if let user = authViewModel.currentUser {
+            //guard let username = user.username else { print("DEBUG: username returning"); return }
+                let username = user.username
+
+            ImageUploader.uploadPostImageUrl( image: image) { postImageUrl in
+                    Firestore.firestore().collection("posts")
+                        .document(username)
+                        .setData(["postImageUrl": postImageUrl ]) { error in
+                            if let error = error {
+                                print("\(error.localizedDescription)")
+                                return
+                            }
+
                         }
-                        
-                    }
-                
-                // self.isSaved = true
-                
-            }
-        //}
+
+                     self.isSaved = true
+
+                }
+        }
         
 //
 //        //UIImageWriteToSavedPhotosAlbum(<#T##image: UIImage##UIImage#>, <#T##completionTarget: Any?##Any?#>, <#T##completionSelector: Selector?##Selector?#>, <#T##contextInfo: UnsafeMutableRawPointer?##UnsafeMutableRawPointer?#>)
