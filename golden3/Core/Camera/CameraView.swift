@@ -52,7 +52,7 @@ struct CameraView: View{
                                 HStack {
                                     Spacer()
                                     Button(action: camera.reTake, label: {
-                                        Image(systemName: "arrow.triangle.2.circlepath.camera").foregroundColor(.black)
+                                        Image("redo").foregroundColor(.white)
                                             .padding()
                                             .background(Color.white)
                                             .clipShape(Circle())
@@ -129,6 +129,7 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
         // Checks if camera has permissions.
         // TODO: See if specific user gave permissions (?)
         switch AVCaptureDevice.authorizationStatus(for: .video) {
+            
         case .authorized:
             setUpCamera()
             return
@@ -138,6 +139,7 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
                     self.setUpCamera()
                 }
             }
+            return
         case .denied:
             self.alert.toggle()
             return
@@ -149,6 +151,7 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
         do{
             self.session.beginConfiguration()
             // guard let device = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
+            
             guard let device = AVCaptureDevice.default(.builtInWideAngleCamera,for: .video, position: .back)
                     
             else {
@@ -175,13 +178,16 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     func takePicture(){
         DispatchQueue.global(qos: .background).async {
             self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-            self.session.stopRunning()
+//            self.session.stopRunning()
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                 withAnimation{self.isCameraTaken.toggle()}
+                self.session.stopRunning()
             }
+            
         }
         print("DEBUG: Picture Taken")
+        
     }
     //TODO: Retake Photo
     func reTake(){
@@ -212,12 +218,14 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     }
     
     func savePicture(){
+        
         let image = UIImage(data: self.pictureData)!
         
         
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         self.isSaved = true
         print("DEBUG: Photo saved")
+        
     }
     
 //    func uploadPost(){
