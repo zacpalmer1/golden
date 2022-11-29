@@ -83,6 +83,16 @@ struct ProfileView: View {
                         .foregroundColor(.black)
                         .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 0.75))
                 }
+                
+                Button{
+                    viewRouter.currentPage = .cameraPage
+                } label: {
+                    Text("Camera").font(.subheadline).bold()
+                        .frame(width: 120, height: 32)
+                        .foregroundColor(.black)
+                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 0.75))
+                }
+                
                 Spacer()
                 
             }
