@@ -93,6 +93,7 @@ struct ActualRegistrationView: View {
                             //if let selectedImage = selectedImage {
                                 print("DEBUG: _____________________ IF LET")
                                 viewModel.uploadProfileImage(selectedImage)
+                            //viewRouter.currentPage = .howItWorksPage
                             //}
                             
                         }) {

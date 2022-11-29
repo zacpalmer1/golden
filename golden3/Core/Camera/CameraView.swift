@@ -178,8 +178,7 @@ class Camera: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
     func takePicture(){
         DispatchQueue.global(qos: .background).async {
             self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-//            self.session.stopRunning()
-            
+          
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                 withAnimation{self.isCameraTaken.toggle()}
                 self.session.stopRunning()
