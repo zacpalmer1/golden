@@ -20,6 +20,7 @@ struct ContentView: View {
     @State private var selectedImage: UIImage?
     @State private var profileImage: Image?
     
+    @State var retrievedImages = [UIImage]()
     
     var body: some View {
         Group {
@@ -61,7 +62,7 @@ extension ContentView {
                         Image("goldenlogo")
                              .resizable()
                              .frame(width:130, height:45)
-                             //.padding(.trailing, 50)
+                             .padding(.trailing, 120)
                     }
 //                    Image("goldenlogo")
 //                         .resizable()
@@ -113,7 +114,9 @@ extension ContentView {
                 }
                 
             }
+                
             }
+        
             
         
     }

@@ -43,14 +43,14 @@ struct ImageUploader {
         
         
         let filename = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/post_images\(filename)")       // post path
+        let reference = Storage.storage().reference(withPath: "/post_images\(filename)")       // post path
         
-        ref.putData(imageData, metadata: nil) { _, error in
+        reference.putData(imageData, metadata: nil) { _, error in
             if let error = error {
                 print("DEBUG: Failed to upload image with error: , \(error.localizedDescription)")
             }
             
-            ref.downloadURL { imageUrl, error in
+            reference.downloadURL { imageUrl, error in
                 if let error = error {
                     print("DEBUG: Failed to upload image with error: , \(error.localizedDescription)")
                 }

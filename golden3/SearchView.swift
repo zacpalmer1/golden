@@ -16,7 +16,7 @@ struct SearchView: View {
             List {
                 ForEach(countries, id: \.self) { country in
                     HStack {
-                        Text(country.capitalized)
+                        //Text(country.capitalized)
                         //Spacer()
                         //Image(systemName: "figure.walk")
                            // .foregroundColor(Color.blue.opacity(0.8))
