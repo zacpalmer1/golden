@@ -33,18 +33,21 @@ struct CameraView: View{
                             .ignoresSafeArea()
                         
                         VStack{
-                            if camera.isCameraTaken{
-                                HStack {
-                                    Spacer()
-                                    Button(action: camera.reTake, label: {
-                                        Image("redo").foregroundColor(.white)
-                                            .padding()
-                                            .background(Color.white)
-                                            .clipShape(Circle())
-                                    })
-                                    .padding(.trailing)
+                            if photoIsSelected == false {
+                                if camera.isCameraTaken{
+                                    HStack {
+                                        Spacer()
+                                        Button(action: camera.reTake, label: {
+                                            Image("redo").foregroundColor(.white)
+                                                .padding()
+                                                .background(Color.white)
+                                                .clipShape(Circle())
+                                        })
+                                        .padding(.trailing)
+                                    }
                                 }
                             }
+                            
                             Spacer()
                             HStack{
                                 // Camera button
@@ -100,6 +103,8 @@ struct CameraView: View{
                                         if let selectedImage = selectedImage{
                                             Button{
                                                 authViewModel.uploadPostImage(selectedImage)
+                                                
+                                                viewRouter.currentPage = .contentPage
                                                 
                                             } label: {
                                                 Text("Post")

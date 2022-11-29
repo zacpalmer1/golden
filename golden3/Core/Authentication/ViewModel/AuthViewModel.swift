@@ -11,14 +11,17 @@ import Firebase
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var recentPost: PostImage?
     
     private var tempUserSession: FirebaseAuth.User?
     
     private let service = UserService()
+    private let postService = PostService()
     
     init() {
         self.userSession = Auth.auth().currentUser
         self.fetchUser()
+        self.fetchPost()
         
         //print("DEBUG: User session is \(self.userSession?.uid)")
     }
@@ -49,7 +52,7 @@ class AuthViewModel: ObservableObject{
             
             guard let user = result?.user else { return }
             self.tempUserSession = user
-            //self.userSession = user
+
             
             
             // Data dictionary
@@ -99,10 +102,20 @@ class AuthViewModel: ObservableObject{
         print("DEBUG: uploadpostimage function start")
         guard let uid = userSession?.uid else { return }
         
+        service.fetchUser(withUId: uid) { User in
+            self.currentUser = User
+        }
+        
+        
+        let currentDateTime = Date()
+        
         ImageUploader.uploadPostImageUrl(image: image) { postImageUrl in
             Firestore.firestore().collection("posts")
                 .document(uid)
-                .setData(["postImageUrl" : postImageUrl]) { error in
+                .setData(["uid" : uid,
+                          "postImageUrl" : postImageUrl,
+                          "date_uploaded" : currentDateTime
+                         ]) { error in
                     if let error = error {
                         print("DEBUG: Failed to upload postImageUrl with error \(error.localizedDescription)")
                         return
@@ -120,6 +133,13 @@ class AuthViewModel: ObservableObject{
         guard let uid = self.userSession?.uid else {return}
         service.fetchUser(withUId: uid) { User in
             self.currentUser = User
+        }
+    }
+    
+    func fetchPost(){
+        guard let uid = self.userSession?.uid else { return }
+        postService.fetchPost(withUId: uid) { PostImage in
+            self.recentPost = PostImage
         }
     }
     

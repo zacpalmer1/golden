@@ -71,6 +71,8 @@
 		F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0BE29075C0900225F49 /* SearchView.swift */; };
 		F39DE0C129075C1C00225F49 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C029075C1C00225F49 /* SampleData.swift */; };
 		F39DE0C529077A7E00225F49 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C429077A7E00225F49 /* ImagePicker.swift */; };
+		F3A2CC6E2935E4A900B4E423 /* PostImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A2CC6D2935E4A900B4E423 /* PostImage.swift */; };
+		F3A2CC702935E54F00B4E423 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A2CC6F2935E54F00B4E423 /* PostService.swift */; };
 		F3C3E25E2935B42B00615299 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C3E25D2935B42B00615299 /* GoogleService-Info.plist */; };
 		F3C3E2632935CD4B00615299 /* MakePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3E2612935CD4B00615299 /* MakePostView.swift */; };
 		F3C3E2642935CD4B00615299 /* PostCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3E2622935CD4B00615299 /* PostCompleteView.swift */; };
@@ -116,6 +118,8 @@
 		F39DE0BE29075C0900225F49 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = golden3/SearchView.swift; sourceTree = SOURCE_ROOT; };
 		F39DE0C029075C1C00225F49 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = golden3/SampleData.swift; sourceTree = SOURCE_ROOT; };
 		F39DE0C429077A7E00225F49 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		F3A2CC6D2935E4A900B4E423 /* PostImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImage.swift; sourceTree = "<group>"; };
+		F3A2CC6F2935E54F00B4E423 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		F3C3E25D2935B42B00615299 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3C3E2612935CD4B00615299 /* MakePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakePostView.swift; path = golden3/Core/Components/Posts/MakePostView.swift; sourceTree = SOURCE_ROOT; };
 		F3C3E2622935CD4B00615299 /* PostCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCompleteView.swift; path = golden3/Core/Components/Posts/PostCompleteView.swift; sourceTree = SOURCE_ROOT; };
@@ -268,6 +272,7 @@
 				982BF4D12905A47300141B2C /* StorageManager.swift */,
 				982BF4DC291B06C100141B2C /* UserService.swift */,
 				F37A2B24292587A500ACEDBA /* ImageUploader.swift */,
+				F3A2CC6F2935E54F00B4E423 /* PostService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				F395605B29280BF100A1865F /* User.swift */,
+				F3A2CC6D2935E4A900B4E423 /* PostImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -584,6 +590,7 @@
 				F3C3E2672935CDA400615299 /* SettingsView.swift in Sources */,
 				B2C4E8492858107F00731F12 /* ContentView.swift in Sources */,
 				F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */,
+				F3A2CC702935E54F00B4E423 /* PostService.swift in Sources */,
 				B2C4E85F2858119A00731F12 /* FeedView.swift in Sources */,
 				B23F511228590E360080FE33 /* ActualProfileView.swift in Sources */,
 				F3C3E2692935CE4300615299 /* MainTabView.swift in Sources */,
@@ -596,6 +603,7 @@
 				D1D3689028F8DFA900BF016F /* DONTUSELOGIN.swift in Sources */,
 				B2C4E8472858107F00731F12 /* golden3App.swift in Sources */,
 				B2C4E86B28581A5100731F12 /* ClockView.swift in Sources */,
+				F3A2CC6E2935E4A900B4E423 /* PostImage.swift in Sources */,
 				D1D3689628F8E5A900BF016F /* SignupInput.swift in Sources */,
 				F39DE0C529077A7E00225F49 /* ImagePicker.swift in Sources */,
 				B2C4E8682858199B00731F12 /* ProfileView.swift in Sources */,

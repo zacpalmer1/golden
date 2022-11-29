@@ -6,10 +6,29 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SettingsView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var authViewModel: AuthViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Button{
+                viewRouter.currentPage = .profilePage
+            } label: {
+                Text("Back")
+            }
+            Spacer()
+            HStack{
+                Button{
+                    authViewModel.signOut()
+                    viewRouter.currentPage = .greetingPage
+                } label: {
+                    Text("Sign out")
+                }
+            }
+        }
     }
 }
 
