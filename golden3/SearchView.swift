@@ -1,9 +1,9 @@
 
 //
 //  ContentView.swift
-//  SearchBar15
+//  Golden Search Bar 
 //
-//  Created by Federico on 20/11/2021.
+//  Created by Grayson Hackett on 20/11/2021.
 //
 import SwiftUI
 

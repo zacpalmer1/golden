@@ -104,4 +104,28 @@ class AuthViewModel: ObservableObject{
             self.currentUser = User
         }
     }
+    
+//    func followUser(withUID uid: String, completion: @escaping (Error?) -> ()) {
+//
+//        //guard let uid = self.userSession?.uid else {return}
+//        guard let currentLoggedInUserId = Auth.auth().currentUser?.uid else { return }
+//
+//        let values = [uid: 1]
+//        Database.database().reference().child("following").child(currentLoggedInUserId).updateChildValues(values) { (err, ref) in
+//            if let err = err {
+//                completion(err)
+//                return
+//            }
+//
+//            let values = [currentLoggedInUserId: 1]
+//            Database.database().reference().child("followers").child(uid).updateChildValues(values) { (err, ref) in
+//                if let err = err {
+//                    completion(err)
+//                    return
+//                }
+//                completion(nil)
+//            }
+//        }
+//    }
+    
 }
