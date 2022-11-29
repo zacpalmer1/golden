@@ -11,93 +11,113 @@ import Kingfisher
 struct ProfileView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var authViewModel: AuthViewModel
-    // private let user: User
+    @State var showNewPostView = false
     
-//    init(user: User) {
-//        self.user = user
-//    }
-
+    
+    
     var body: some View {
         
-        if let user = authViewModel.currentUser {
+        
+        let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+        
+        if let user = authViewModel.currentUser{
+            ZStack(alignment: .leading){
+                Button{
+                    viewRouter.currentPage = .contentPage
+                } label: {
+                   
+                        Text("Back")
+                            .padding(.bottom, 700)
+                            .padding(.leading, 20)
+                            .foregroundColor(.black)
+                            .font(Font.custom("FredokaOne-Regular", size: 15))
+                       
+                    
+                }
+                
+            
             VStack{
                 
-
-                HStack(spacing: 12){
-                    Spacer()
-                    VStack{
-                        KFImage(URL(string: user.profileImageUrl))
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width:200, height: 200)
-                            .clipShape(Circle())
-                            .clipped()
-                            .padding(.top)
-                        
-                        Text(user.fullname)
-                            .font(Font.custom("FredokaOne-Regular", size: 25)).padding(.top, 8)
-                            .foregroundColor(.black)
-                        
+                HStack{
+                    
+                    
+                    
+                    
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width:80, height: 80)
+                        .clipShape(Circle())
+                        .clipped()
+                    
+                    
+                    VStack(alignment: .leading){
+                        ZStack{
+                            Button{
+                                viewRouter.currentPage = .settingsPage
+                            } label: {
+                                
+                                Text("Settings")
+                                    .foregroundColor(.white)
+                                    .font(Font.custom("FredokaOne-Regular", size: 15))
+                                    .foregroundColor(.black)
+                                    .fontWeight(.semibold)
+                                    .padding(.vertical, 10)
+                                    .padding(.horizontal, 20)
+                                    .background(Color.black)
+                                    .clipShape(Capsule())
+                                
+                            }
+                            
+                            
+                        }
                         Text(user.username)
-                            .font(Font.custom("FredokaOne-Regular", size: 18))
+                            .font(Font.custom("FredokaOne-Regular", size: 17))
+                            .foregroundColor(.white)
+                        Text(user.fullname)
+                            .font(Font.custom("FredokaOne-Regular", size: 17))
                             .foregroundColor(.gray)
-            
-                    }
-                    Spacer()
-                    Button{
                         
-                    } label: {
-                        Text("Edit Profile")
-                            .font(.subheadline)
-                            .bold()
-                            .frame(width: 120, height: 32)
-                            .foregroundColor(.black)
-                            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 0.75))
-                            .padding(.trailing, 10)
+                        
                     }
+                    .padding(.top,80)
+                    
+                    
+                    
+                    
+                    
                 }
-                Spacer()
-                Button{
-                print("Camera button")
-                viewRouter.currentPage = .cameraPage
-
-            } label: {
-                Image(systemName: "camera.fill")
-                    .resizable()
-                    .renderingMode(.template)
-                    .frame(width: 28, height: 28)
+                Text("Photos")
+                    .font(Font.custom("FredokaOne-Regular", size: 30))
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
-            }
-            .background(Color.black)
-            .foregroundColor(.white)
-            .clipShape(Circle())
-            .padding()
-            //.fullScreenCover(isPresented: $showNewPostView){
-                Text("New Post View")
-            
-                Button{
-                    authViewModel.signOut()
-                } label: {
-                    Text("Sign Out").font(.subheadline).bold()
-                        .frame(width: 120, height: 32)
-                        .foregroundColor(.black)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 0.75))
+                    .foregroundColor(.white)
+                
+                
+                ZStack (alignment: .topTrailing){
+                    //                    if let post = authViewModel.recentPost {
+                    //                        KFImage(URL(string: post.postImageUrl))
+                    //                    }
+                    ScrollView{
+                        LazyVGrid(columns: gridItemLayout, spacing: 20) {
+                            ForEach((0...13), id: \.self) {_ in
+                                Rectangle()
+                                    .frame(width: 110, height: 110)
+                                    .cornerRadius(20)
+                                    .opacity(0.5)
+                                    .foregroundColor(.white)
+                            }
+                            //                            ForEach((14), id: \.self) {_ in
+                            //                                KFImage(URL)
+                            //                            }
+                            //
+                        }
+                    }
+                    .padding([.leading, .trailing])
                 }
-                
-                Button{
-                    viewRouter.currentPage = .cameraPage
-                } label: {
-                    Text("Camera").font(.subheadline).bold()
-                        .frame(width: 120, height: 32)
-                        .foregroundColor(.black)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 0.75))
-                }
-                
-                Spacer()
-                
             }
         }
-        
+        }
     }
 }
 

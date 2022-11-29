@@ -83,10 +83,10 @@ func timeToSunset()-> Int{
     let hour = calendar.component(.hour, from:today)
     
     if hour > 17{
-        return 24 - hour + 17 - 1
+        return 24 - hour + 17
     }
     else{
-        return 17 - hour - 1
+        return 17 - hour
     }
 }
 

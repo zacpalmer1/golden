@@ -23,21 +23,17 @@ struct MainTabView: View {
                             self.selectIndex = 0
                         }
                         .tabItem{
-//                       Image("homelogo")
-//                         .resizable()
-//                         .ignoresSafeArea()
-//                          .frame(width: 50, height: 50)
-                            Text("Home")
-                                .font(Font.custom("FredokaOne-Regular", size: 60))
-                                .padding(.trailing, 60)
-                                .foregroundColor(.white)
-
+                            Image(systemName: "house")
+                         .resizable()
+                         .ignoresSafeArea()
+                          .frame(width: 50, height: 50)
+                            
 
                     }
                     
                         .tag(0)
-                   
-                    TimerBack()
+                   Spacer()
+                    
                     
 //                    Button{
 //                        print("Camera button")
@@ -71,16 +67,17 @@ struct MainTabView: View {
 //
 //                        }
                             
-                    ActualProfileView()
+                    //ActualProfileView()
+                    SearchView()
                         .onTapGesture {
                             self.selectIndex = 2
                         }
                         .tabItem{
                             
-                            Text("Profile")
-                                .font(Font.custom("FredokaOne-Regular", size: 60))
-                                .padding(.trailing, 60)
-                                .foregroundColor(.white)
+                            Image(systemName: "magnifyingglass")
+                              .resizable()
+                              .ignoresSafeArea()
+                               .frame(width: 50, height: 50)
                     }
                         .tag(2)
                         .background(Color.gray)
@@ -92,7 +89,7 @@ struct MainTabView: View {
                 .background(Color.gray)
                     
             }
-            
+            TimerBack()
             
         }
         

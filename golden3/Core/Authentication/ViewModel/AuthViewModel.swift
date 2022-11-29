@@ -23,7 +23,6 @@ class AuthViewModel: ObservableObject{
         self.fetchUser()
         self.fetchPost()
         
-        //print("DEBUG: User session is \(self.userSession?.uid)")
     }
     
     // Login function
