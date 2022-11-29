@@ -31,6 +31,12 @@ struct ViewControl: View {
         case .cameraPage:
             CameraView()
     
+        case .settingsPage:
+            SettingsView()
+            
+        case .makePostPage:
+            MakePostView()
+            
         case .actualLoginPage:
             ActualLoginView()
         case .actualRegistrationPage:

@@ -70,7 +70,7 @@ extension ContentView {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button{
-                        viewRouter.currentPage = .searchPage
+                        viewRouter.currentPage = .makePostPage
                     } label: {
                         Image("magnifylogo")
                             .resizable()
@@ -86,29 +86,24 @@ extension ContentView {
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    if let user = authViewModel.currentUser {
-//                        Button{
-//                            //viewRouter.currentPage = .profilePage
-//
-//                        } label: {
+                    Button{
+                        viewRouter.currentPage = .profilePage
+                    } label: {
+                        if let user = authViewModel.currentUser {
+                            
                             KFImage(URL(string: user.profileImageUrl))
-                                
+                            
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 50, height: 50)
-                                //.padding(.top, 85)
+                            //.padding(.top, 85)
                                 .clipShape(Circle())
-                        // username will be the users unique username
-                            Text("@\(user.username)")
+                            // username will be the users unique username
+                            Text(user.username)
                                 .font(Font.custom("FredokaOne-Regular", size: 18))
                                 .foregroundColor(.black)
                                 .padding(.top, 85)
-                       
-                            
-                            
-
-                        //}
-                        
+                        }
                     }
                         
                     }

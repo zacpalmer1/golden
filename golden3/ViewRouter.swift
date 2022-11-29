@@ -39,6 +39,9 @@ enum Page {
     case cameraPage
     case profilePage
     
+    case makePostPage
+    case settingsPage
+    
     case actualLoginPage
     case actualRegistrationPage
     case searchPage

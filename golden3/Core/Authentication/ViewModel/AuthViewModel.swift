@@ -95,6 +95,24 @@ class AuthViewModel: ObservableObject{
         }
     }
     
+    func uploadPostImage(_ image: UIImage) {
+        print("DEBUG: uploadpostimage function start")
+        guard let uid = userSession?.uid else { return }
+        
+        ImageUploader.uploadPostImageUrl(image: image) { postImageUrl in
+            Firestore.firestore().collection("posts")
+                .document(uid)
+                .setData(["postImageUrl" : postImageUrl]) { error in
+                    if let error = error {
+                        print("DEBUG: Failed to upload postImageUrl with error \(error.localizedDescription)")
+                        return
+                    }
+                }
+        }
+    }
+    
+    
+    
     
     
     

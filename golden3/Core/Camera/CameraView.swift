@@ -14,36 +14,21 @@ struct CameraView: View{
     @Environment(\.presentationMode) var presentationMode
     @StateObject var camera = Camera()
     @EnvironmentObject var viewRouter: ViewRouter
+    
+    @State private var selectedImage: UIImage?
+    @State private var postImage: Image?
+    @State private var showImagePicker = false
+    
+    @State private var photoIsSelected = false
+    
     var body: some View {
         
         let user = authViewModel.currentUser
         
         if user != nil {
-            // Button{
-            //            withAnimation(){
-            //                viewRouter.currentPage = .contentPage
-            //
-            //            }
-            //
-            //        } label: {
-            //            Image("back")
-            //                 .resizable()
-            //                 .frame(width:20, height:20)
-            //                 .padding(.trailing, 300)
-            //        }
+
                     ZStack{
-            //            Button{
-            //                withAnimation(){
-            //                    viewRouter.currentPage = .contentPage
-            //
-            //                }
-            //
-            //            } label: {
-            //                Image("back")
-            //                     .resizable()
-            //                     .frame(width:20, height:20)
-            //                     .padding(.trailing, 300)
-            //            }
+
                         CameraPreview(camera: camera)
                             .ignoresSafeArea()
                         
@@ -66,6 +51,7 @@ struct CameraView: View{
                                 if camera.isCameraTaken{
                                     // Save button
                                     // TODO: Instead of a save button, have it automatically upload to database and post.
+                                    
                                     Button(action: {if !camera.isSaved{camera.savePicture()}}, label: {
                                         Text(camera.isSaved ? "Saved" : "Save")
                                             .foregroundColor(.black)
@@ -74,9 +60,60 @@ struct CameraView: View{
                                             .padding(.horizontal, 20)
                                             .background(Color.white)
                                             .clipShape(Capsule())
+                                            .font(Font.custom("FredokaOne-Regular", size: 20))
                                     })
                                     .padding(.leading)
                                     Spacer()
+                                    
+                                    if camera.isSaved == true && photoIsSelected == false {
+                                        Button{
+                                            showImagePicker.toggle()
+                                            print("DEBUG: toggle")
+                                            
+//                                            if let selectedImage = selectedImage {
+//                                                print("DEBUG: select")
+//                                                if postImage != nil {
+//                                                    authViewModel.uploadPostImage(selectedImage)
+//                                                    print("DEBUG: HERERHERE")
+//                                                }
+//                                            }
+                                            
+                                            
+                                            
+                                            
+                                        } label: {
+                                            Text("Make A Post")
+                                                .foregroundColor(.black)
+                                                .fontWeight(.semibold)
+                                                .padding(.vertical, 10)
+                                                .padding(.horizontal, 20)
+                                                .background(Color.white)
+                                                .clipShape(Capsule())
+                                                .font(Font.custom("FredokaOne-Regular", size: 20))
+                                        }
+                                        .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+                                            ImagePicker(selectedImage: $selectedImage)
+                                        }
+                                    }
+                                    
+                                    if camera.isSaved == true && photoIsSelected == true {
+                                        if let selectedImage = selectedImage{
+                                            Button{
+                                                authViewModel.uploadPostImage(selectedImage)
+                                                
+                                            } label: {
+                                                Text("Post")
+                                                    .foregroundColor(.black)
+                                                    .fontWeight(.semibold)
+                                                    .padding(.vertical, 10)
+                                                    .padding(.horizontal, 20)
+                                                    .background(Color.white)
+                                                    .clipShape(Capsule())
+                                                    .font(Font.custom("FredokaOne-Regular", size: 20))
+                                            }
+                                        }
+                                        
+                                    }
                                 } else {
                                     Button(action: camera.takePicture, label: {
                                         
@@ -102,6 +139,13 @@ struct CameraView: View{
         }
         
  
+    }
+    
+    func loadImage() {
+        guard let selectedImage = selectedImage else {return}
+        postImage = Image(uiImage: selectedImage)
+        print("DEBUG: loaded image\(postImage)")
+        photoIsSelected = true
     }
 }
 

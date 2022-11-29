@@ -20,7 +20,7 @@ struct TimerBack: View {
     var body: some View {
         VStack{
         
-            Text("\(timeZoneHours):\(timeZoneMinutes):\(secondsCount)")
+            Text("\(timeZoneHours):\(timeZoneMinutes)")
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .font(Font.custom("FredokaOne-Regular", size: 46))
                 .foregroundColor(.black)

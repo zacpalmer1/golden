@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		13BBBD2E29357B270011DBE5 /* TimerBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BBBD2D29357B270011DBE5 /* TimerBack.swift */; };
-		13BBBD3029357B330011DBE5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BBBD2F29357B330011DBE5 /* MainTabView.swift */; };
 		982BF4D029059C5500141B2C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4CF29059C5500141B2C /* Post.swift */; };
 		982BF4D22905A47300141B2C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4D12905A47300141B2C /* StorageManager.swift */; };
 		982BF4D72906E70E00141B2C /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982BF4D62906E70E00141B2C /* CameraView.swift */; };
@@ -73,11 +72,14 @@
 		F39DE0C129075C1C00225F49 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C029075C1C00225F49 /* SampleData.swift */; };
 		F39DE0C529077A7E00225F49 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DE0C429077A7E00225F49 /* ImagePicker.swift */; };
 		F3C3E25E2935B42B00615299 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C3E25D2935B42B00615299 /* GoogleService-Info.plist */; };
+		F3C3E2632935CD4B00615299 /* MakePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3E2612935CD4B00615299 /* MakePostView.swift */; };
+		F3C3E2642935CD4B00615299 /* PostCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3E2622935CD4B00615299 /* PostCompleteView.swift */; };
+		F3C3E2672935CDA400615299 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3E2662935CDA400615299 /* SettingsView.swift */; };
+		F3C3E2692935CE4300615299 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3E2682935CE4300615299 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13BBBD2D29357B270011DBE5 /* TimerBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerBack.swift; path = Core/TimerBack.swift; sourceTree = "<group>"; };
-		13BBBD2F29357B330011DBE5 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = Core/MainTabView.swift; sourceTree = "<group>"; };
 		982BF4CF29059C5500141B2C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		982BF4D12905A47300141B2C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageManager.swift; path = golden3/Core/Components/Posts/StorageManager.swift; sourceTree = SOURCE_ROOT; };
 		982BF4D62906E70E00141B2C /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,10 @@
 		F39DE0C029075C1C00225F49 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = golden3/SampleData.swift; sourceTree = SOURCE_ROOT; };
 		F39DE0C429077A7E00225F49 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F3C3E25D2935B42B00615299 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3C3E2612935CD4B00615299 /* MakePostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakePostView.swift; path = golden3/Core/Components/Posts/MakePostView.swift; sourceTree = SOURCE_ROOT; };
+		F3C3E2622935CD4B00615299 /* PostCompleteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostCompleteView.swift; path = golden3/Core/Components/Posts/PostCompleteView.swift; sourceTree = SOURCE_ROOT; };
+		F3C3E2662935CDA400615299 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F3C3E2682935CE4300615299 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				13BBBD2D29357B270011DBE5 /* TimerBack.swift */,
-				13BBBD2F29357B330011DBE5 /* MainTabView.swift */,
 				F395605A29280BE500A1865F /* Model */,
 				F37A2B26292592D500ACEDBA /* Utility */,
 				B2C4E8462858107F00731F12 /* golden3App.swift */,
@@ -240,6 +245,8 @@
 		B2C4E854285810EF00731F12 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F3C3E2682935CE4300615299 /* MainTabView.swift */,
+				F3C3E2652935CD7F00615299 /* Settings */,
 				F315675228FDF875005AF020 /* ViewControl.swift */,
 				F3370AFE28FF5B1B00712AF5 /* Authentication */,
 				D18FE65C28F9EFBC00C5A572 /* Background */,
@@ -333,6 +340,8 @@
 		B2C4E8662858197F00731F12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F3C3E2612935CD4B00615299 /* MakePostView.swift */,
+				F3C3E2622935CD4B00615299 /* PostCompleteView.swift */,
 				B2C4E8672858199B00731F12 /* ProfileView.swift */,
 				B23F511128590E360080FE33 /* ActualProfileView.swift */,
 			);
@@ -450,6 +459,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F3C3E2652935CD7F00615299 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F3C3E2662935CDA400615299 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -564,14 +581,17 @@
 				B2C4E8642858131900731F12 /* PostRowView.swift in Sources */,
 				982BF4DD291B06C100141B2C /* UserService.swift in Sources */,
 				B2C4E86D28581B4600731F12 /* ActualFeed.swift in Sources */,
-				13BBBD3029357B330011DBE5 /* MainTabView.swift in Sources */,
+				F3C3E2672935CDA400615299 /* SettingsView.swift in Sources */,
 				B2C4E8492858107F00731F12 /* ContentView.swift in Sources */,
 				F39DE0BF29075C0900225F49 /* SearchView.swift in Sources */,
 				B2C4E85F2858119A00731F12 /* FeedView.swift in Sources */,
 				B23F511228590E360080FE33 /* ActualProfileView.swift in Sources */,
+				F3C3E2692935CE4300615299 /* MainTabView.swift in Sources */,
+				F3C3E2642935CD4B00615299 /* PostCompleteView.swift in Sources */,
 				F395605C29280BF100A1865F /* User.swift in Sources */,
 				D18FE65E28F9EFDB00C5A572 /* BackgroundAnimated.swift in Sources */,
 				982BF4D22905A47300141B2C /* StorageManager.swift in Sources */,
+				F3C3E2632935CD4B00615299 /* MakePostView.swift in Sources */,
 				F37A2B202925633C00ACEDBA /* ActualLoginView.swift in Sources */,
 				D1D3689028F8DFA900BF016F /* DONTUSELOGIN.swift in Sources */,
 				B2C4E8472858107F00731F12 /* golden3App.swift in Sources */,

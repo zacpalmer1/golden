@@ -1,34 +1,17 @@
 
 //
 //  ContentView.swift
-//  Golden Search Bar 
+//  SearchBar15
 //
-//  Created by Grayson Hackett on 20/11/2021.
+//  Created by Federico on 20/11/2021.
 //
 import SwiftUI
 
 struct SearchView: View {
-    @EnvironmentObject var viewRouter: ViewRouter
     private var listOfCountry = userNames
     @State var searchText = ""
     
     var body: some View {
-              
-        Button{
-            withAnimation(){
-                viewRouter.currentPage = .contentPage
-
-            }
-
-        } label: {
-            Image("back")
-                 .resizable()
-                 .frame(width:20, height:20)
-                 .padding(.trailing, 300)
-        }
-
-
-        
         NavigationView {
             List {
                 ForEach(countries, id: \.self) { country in
@@ -44,7 +27,6 @@ struct SearchView: View {
             .searchable(text: $searchText)
             .navigationTitle("Search User")
         }
-
     }
     
     // Filter countries
