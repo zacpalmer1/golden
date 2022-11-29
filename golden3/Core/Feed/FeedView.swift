@@ -25,7 +25,7 @@ struct FeedView: View {
                 }
                 
                 LazyVStack(spacing: 40){
-                    ForEach(0 ... 0, id: \.self) { _ in
+                    ForEach(0 ... 10, id: \.self) { _ in  // change back to 0 ... 0
                         PostRowView()
                     }
                 }

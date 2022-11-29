@@ -62,7 +62,7 @@ extension ContentView {
                         Image("goldenlogo")
                              .resizable()
                              .frame(width:130, height:45)
-                             .padding(.trailing, 120)
+                             .padding(.trailing, 100)
                     }
 //                    Image("goldenlogo")
 //                         .resizable()
@@ -73,14 +73,14 @@ extension ContentView {
                     Button{
                         viewRouter.currentPage = .makePostPage
                     } label: {
-                        Image("magnifylogo")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .foregroundColor(.white)
-//                        Text("Search")
-//                            .font(Font.custom("FredokaOne-Regular", size: 60))
-//                            .padding(.trailing, 60)
+//                        Image("magnifylogo")
+//                            .resizable()
+//                            .frame(width: 35, height: 35)
 //                            .foregroundColor(.white)
+                        Text("Demo")
+                            .font(Font.custom("FredokaOne-Regular", size: 20))
+                            .padding(.trailing, 10)
+                            .foregroundColor(.black)
 //                        Image("more")
 //                            .resizable()
 //                            .frame(width:20, height:20)
