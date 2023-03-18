@@ -1,6 +1,6 @@
 <img width="200" alt="Screenshot 2023-03-16 at 7 32 32 PM" src="https://user-images.githubusercontent.com/75393933/226000780-5e2f7756-0c09-41be-ad54-b78fcbd8845a.png">
 
-# Golden
+# golden
 
 ### A project for our software engineering class at CofC. 
 
