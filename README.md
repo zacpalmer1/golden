@@ -2,7 +2,7 @@
 
 # golden
 
-### A project for CSCI 362: Software Engineering. 
+### Final project for CSCI 362: Software Engineering. 
 
 ## Functional Requirements
 - This software will allow users to register for an account, log in, and logout.
